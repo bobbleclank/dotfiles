@@ -1,0 +1,94 @@
+" Compatibility
+set nocompatible
+
+" File type detection
+filetype on
+
+" Syntax highlighting
+syntax on
+
+" Character encoding
+set encoding=utf-8
+
+" Tabs
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+function! ToggleTab()
+  if &expandtab
+    set softtabstop=0
+    set shiftwidth=8
+    set noexpandtab
+    set listchars=tab:>\ ,trail:.,precedes:<,extends:>
+    echo "tabs"
+  else
+    set softtabstop=4
+    set shiftwidth=4
+    set expandtab
+    set listchars=tab:>-,trail:.,precedes:<,extends:>
+    echo "spaces"
+  endif
+endfunction
+
+" Indentation
+filetype indent on
+set autoindent
+set cindent
+set cinoptions=:0,l1,g0
+
+" Color scheme
+colorscheme default
+
+" Screen columns
+set colorcolumn=
+highlight ColorColumn ctermbg=darkgray
+
+" Fast terminal connection
+set ttyfast
+
+" Searching
+set hlsearch
+set incsearch
+
+" Show characters
+set listchars=tab:>-,trail:.,precedes:<,extends:>
+set nolist
+
+" Space highlighting
+let g:spacehi_tabcolor = "ctermfg=green ctermbg=black cterm=underline"
+let g:spacehi_spacecolor = "ctermfg=green ctermbg=black cterm=standout"
+let g:spacehi_nbspcolor = "ctermfg=white ctermbg=red cterm=none"
+
+" Undo file
+set noundofile
+
+" Swap file
+set noswapfile
+
+" Backup file
+set nobackup
+set nowritebackup
+
+" Spell checking
+set spelllang=en
+set spellfile=~/.vimspellfile.add
+set nospell
+
+" Key mappings
+nnoremap <F5> :set spell!<CR>
+nnoremap <F6> :set list!<CR>
+nnoremap <F7> :ToggleSpaceHi<CR>
+nnoremap <F8> :set hlsearch!<CR>
+" Paste mode
+set pastetoggle=<F9>
+noremap <F10> :call ToggleTab()<CR>
+
+" Auto commands
+augroup vimrc_autocmd
+  autocmd!
+  au BufRead,BufNewFile *.tpp setlocal filetype=cpp
+  au syntax * SpaceHi
+  au FileType gitcommit setlocal spell
+augroup END
