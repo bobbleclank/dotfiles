@@ -16,22 +16,6 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-function! ToggleTab()
-  if &expandtab
-    set softtabstop=0
-    set shiftwidth=8
-    set noexpandtab
-    set listchars=tab:>\ ,trail:.,precedes:<,extends:>
-    echo "tabs"
-  else
-    set softtabstop=4
-    set shiftwidth=4
-    set expandtab
-    set listchars=tab:>-,trail:.,precedes:<,extends:>
-    echo "spaces"
-  endif
-endfunction
-
 " Indentation
 filetype indent on
 set autoindent
@@ -83,7 +67,6 @@ nnoremap <F7> :ToggleSpaceHi<CR>
 nnoremap <F8> :set hlsearch!<CR>
 " Paste mode
 set pastetoggle=<F9>
-noremap <F10> :call ToggleTab()<CR>
 
 " Auto commands
 augroup vimrc_autocmd
