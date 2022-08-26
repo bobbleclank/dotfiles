@@ -60,6 +60,12 @@ set spelllang=en
 set spellfile=~/.vimspellfile.add
 set nospell
 
+" Clang format
+function! ClangFormatOnWrite()
+  let l:formatdiff = 1
+  py3file ~/clang-format.py
+endfunction
+
 " Key mappings
 nnoremap <F5> :set spell!<CR>
 nnoremap <F6> :set list!<CR>
@@ -74,4 +80,5 @@ augroup vimrc_autocmd
   au BufRead,BufNewFile *.tpp setlocal filetype=cpp
   au syntax * SpaceHi
   au FileType gitcommit setlocal spell
+  au BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
 augroup END
