@@ -1,80 +1,88 @@
-" Compatibility
 set nocompatible
 
-" File type detection
 filetype on
-
-" Syntax highlighting
 syntax on
 
-" Character encoding
+"-------------------------------------------------------------------------------
+" Text formatting
+"-------------------------------------------------------------------------------
+
 set encoding=utf-8
 
-" Tabs
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" Indentation
 filetype indent on
+
 set autoindent
 set cindent
 set cinoptions=:0,l1,g0
 
-" Color scheme
+"-------------------------------------------------------------------------------
+" UI settings
+"-------------------------------------------------------------------------------
+
 colorscheme default
 
-" Screen columns
 set colorcolumn=
+
 highlight ColorColumn ctermbg=darkgray
 
-" Fast terminal connection
 set ttyfast
 
-" Searching
+"-------------------------------------------------------------------------------
+" Visual cues
+"-------------------------------------------------------------------------------
+
 set hlsearch
 set incsearch
 
-" Show characters
 set listchars=tab:>-,trail:.,precedes:<,extends:>
 set nolist
 
-" Space highlighting
 let g:spacehi_tabcolor = "ctermfg=green ctermbg=black cterm=underline"
 let g:spacehi_spacecolor = "ctermfg=green ctermbg=black cterm=standout"
 let g:spacehi_nbspcolor = "ctermfg=white ctermbg=red cterm=none"
 
-" Undo file
+"-------------------------------------------------------------------------------
+" Behavioural settings
+"-------------------------------------------------------------------------------
+
 set noundofile
-
-" Swap file
 set noswapfile
-
-" Backup file
 set nobackup
 set nowritebackup
 
-" Spell checking
 set spelllang=en
 set spellfile=~/.vimspellfile.add
 set nospell
 
+"-------------------------------------------------------------------------------
 " Clang format
+"-------------------------------------------------------------------------------
+
 function! ClangFormatOnWrite()
   let l:formatdiff = 1
   py3file ~/clang-format.py
 endfunction
 
+"-------------------------------------------------------------------------------
 " Key mappings
+"-------------------------------------------------------------------------------
+
 nnoremap <F5> :set spell!<CR>
 nnoremap <F6> :set list!<CR>
 nnoremap <F7> :ToggleSpaceHi<CR>
 nnoremap <F8> :set hlsearch!<CR>
-" Paste mode
+
 set pastetoggle=<F9>
 
+"-------------------------------------------------------------------------------
 " Auto commands
+"-------------------------------------------------------------------------------
+
 augroup vimrc_autocmd
   autocmd!
   au BufRead,BufNewFile *.tpp setlocal filetype=cpp
