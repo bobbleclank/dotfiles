@@ -13,10 +13,13 @@ set tabstop=8
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set smarttab
+set shiftround
 
 filetype indent on
 
 set autoindent
+set nosmartindent
 set cindent
 set cinoptions=:0,l1,g0
 
@@ -24,10 +27,27 @@ set cinoptions=:0,l1,g0
 " UI settings
 "-------------------------------------------------------------------------------
 
+set background=dark
+
 colorscheme default
 
+set backspace=indent,eol,start
+set nocursorline
+set nofoldenable
+set showmode
+set ruler
+set number
+set numberwidth=5
+set signcolumn=yes
 set colorcolumn=
+set showcmd
+set modeline
+set cmdheight=2
+set showtabline=2
+set laststatus=2
 
+highlight LineNr ctermfg=darkgray
+highlight SignColumn ctermbg=none
 highlight ColorColumn ctermbg=darkgray
 
 set nottyfast
@@ -39,9 +59,20 @@ set lazyredraw
 
 set hlsearch
 set incsearch
+set ignorecase
+set smartcase
 
 set listchars=tab:>-,trail:.,precedes:<,extends:>
 set nolist
+set wrap
+set linebreak
+set showbreak=>\ 
+set breakindent
+set showmatch
+set matchtime=3
+set scrolloff=3
+set visualbell
+set t_vb=
 
 let g:spacehi_tabcolor = "ctermfg=green ctermbg=black cterm=underline"
 let g:spacehi_spacecolor = "ctermfg=green ctermbg=black cterm=standout"
@@ -50,6 +81,16 @@ let g:spacehi_nbspcolor = "ctermfg=white ctermbg=red cterm=none"
 "-------------------------------------------------------------------------------
 " Behavioural settings
 "-------------------------------------------------------------------------------
+
+set autoread
+set hidden
+set ttimeoutlen=0
+set updatetime=100
+set nostartofline
+set completeopt=longest,menuone
+set shortmess+=c
+set wildignore+=*.o
+set path=$PWD/**
 
 set noundofile
 set noswapfile
