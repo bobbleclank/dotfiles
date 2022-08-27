@@ -30,7 +30,8 @@ set colorcolumn=
 
 highlight ColorColumn ctermbg=darkgray
 
-set ttyfast
+set nottyfast
+set lazyredraw
 
 "-------------------------------------------------------------------------------
 " Visual cues
