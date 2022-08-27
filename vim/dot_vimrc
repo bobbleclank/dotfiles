@@ -35,6 +35,9 @@ Plug 'jpalardy/spacehi.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Show a Git diff in the sign column
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -86,6 +89,10 @@ let g:airline#extensions#tabline#enabled = 1
 highlight LineNr ctermfg=darkgray
 highlight SignColumn ctermbg=none
 highlight ColorColumn ctermbg=darkgray
+
+highlight GitGutterAdd ctermfg=green
+highlight GitGutterChange ctermfg=yellow
+highlight GitGutterDelete ctermfg=red
 
 set nottyfast
 set lazyredraw
