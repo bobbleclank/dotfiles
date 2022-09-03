@@ -85,8 +85,15 @@ set pastetoggle=<F9>
 
 augroup vimrc_autocmd
   autocmd!
+  " tpp files are actually cpp files
   au BufRead,BufNewFile *.tpp setlocal filetype=cpp
+
+  " Highlight tabs and trailing spaces
   au syntax * SpaceHi
+
+  " Enable spell checking for Git commit files
   au FileType gitcommit setlocal spell
+
+  " Format cpp files on write
   au BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
 augroup END
