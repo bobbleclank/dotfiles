@@ -16,6 +16,7 @@ if empty(glob(s:plug_file))
   silent execute '!curl -fLo ' . s:plug_file . ' --create-dirs -k ' .
     \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * ++once PlugInstall --sync
+                 \ | call mkdir(&dir, "p")
                  \ | call mkdir(fnamemodify(&spellfile, ":h"), "p")
                  \ | source $MYVIMRC
 endif
@@ -120,12 +121,13 @@ set wildignore+=*.o
 set path=$PWD/**
 
 set noundofile
-set noswapfile
+set swapfile
 set nobackup
 set nowritebackup
 set spelllang=en
 set nospell
 
+let &dir = s:data_dir . '/swap'
 let &spellfile = s:data_dir . '/spell/wordlist.utf-8.add'
 
 "-------------------------------------------------------------------------------
@@ -179,6 +181,9 @@ augroup vimrc_autocmd
 
   " Highlight tabs and trailing spaces
   au syntax * SpaceHi
+
+  " Always start editing a file in case a swap file exists
+  au SwapExists * let v:swapchoice = 'e'
 
   " Enable spell checking for Git commit files
   au FileType gitcommit setlocal spell
