@@ -16,6 +16,7 @@ if empty(glob(s:plug_file))
   silent execute '!curl -fLo ' . s:plug_file . ' --create-dirs -k ' .
     \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * ++once PlugInstall --sync
+                 \ | call mkdir(fnamemodify(&spellfile, ":h"), "p")
                  \ | source $MYVIMRC
 endif
 
@@ -122,10 +123,10 @@ set noundofile
 set noswapfile
 set nobackup
 set nowritebackup
-
 set spelllang=en
-set spellfile=~/.vimspellfile.add
 set nospell
+
+let &spellfile = s:data_dir . '/spell/wordlist.utf-8.add'
 
 "-------------------------------------------------------------------------------
 " Clang format
