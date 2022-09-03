@@ -121,6 +121,25 @@ nnoremap <F8> :nohlsearch<CR>
 
 set pastetoggle=<F9>
 
+inoremap jk <ESC>
+
+nnoremap j gj
+nnoremap k gk
+
+vnoremap < <gv
+vnoremap > >gv
+
+" Map Y to copy to the end of the line
+map Y y$
+
+" Remap Q to do nothing instead of entering Ex mode
+nnoremap Q <nop>
+
+nnoremap <silent> <C-h> :bprevious<CR>
+nnoremap <silent> <C-l> :bnext<CR>
+
+nnoremap <silent> <C-t> :tab split<CR>
+
 "-------------------------------------------------------------------------------
 " Auto commands
 "-------------------------------------------------------------------------------
