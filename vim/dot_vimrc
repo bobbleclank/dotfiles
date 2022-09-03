@@ -117,7 +117,7 @@ endfunction
 nnoremap <F5> :set spell!<CR>
 nnoremap <F6> :set list!<CR>
 nnoremap <F7> :ToggleSpaceHi<CR>
-nnoremap <F8> :set hlsearch!<CR>
+nnoremap <F8> :nohlsearch<CR>
 
 set pastetoggle=<F9>
 
