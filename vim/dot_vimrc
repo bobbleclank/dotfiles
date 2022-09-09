@@ -31,6 +31,10 @@ Plug 'junegunn/vim-plug'
 " Highlight tabs and trailing spaces
 Plug 'jpalardy/spacehi.vim'
 
+" Status and tabline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -64,8 +68,8 @@ colorscheme default
 set backspace=indent,eol,start
 set nocursorline
 set nofoldenable
-set showmode
-set ruler
+set noshowmode
+set noruler
 set number
 set numberwidth=5
 set signcolumn=yes
@@ -75,6 +79,9 @@ set modeline
 set cmdheight=2
 set showtabline=2
 set laststatus=2
+
+let g:airline_theme = 'simple'
+let g:airline#extensions#tabline#enabled = 1
 
 highlight LineNr ctermfg=darkgray
 highlight SignColumn ctermbg=none
