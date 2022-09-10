@@ -146,6 +146,7 @@ nnoremap <silent> <C-t> :tab split<CR>
 
 augroup vimrc_autocmd
   autocmd!
+
   " tpp files are actually cpp files
   au BufRead,BufNewFile *.tpp setlocal filetype=cpp
 
@@ -165,4 +166,5 @@ augroup vimrc_autocmd
 
   " Resize splits when the window is resized
   au VimResized * exe "normal! \<C-w>="
+
 augroup END
