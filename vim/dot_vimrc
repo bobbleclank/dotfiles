@@ -28,8 +28,8 @@ call plug#begin(s:plugin_dir)
 " Vim help for plugin manager
 Plug 'junegunn/vim-plug'
 
-" Highlight tabs and trailing spaces
-Plug 'jpalardy/spacehi.vim'
+" Highlight trailing whitespace characters
+Plug 'ntpeters/vim-better-whitespace'
 
 " Status and tabline
 Plug 'vim-airline/vim-airline'
@@ -121,9 +121,9 @@ set scrolloff=3
 set visualbell
 set t_vb=
 
-let g:spacehi_tabcolor = "ctermfg=green ctermbg=black cterm=underline"
-let g:spacehi_spacecolor = "ctermfg=green ctermbg=black cterm=standout"
-let g:spacehi_nbspcolor = "ctermfg=white ctermbg=red cterm=none"
+let g:better_whitespace_ctermcolor = 'green'
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 0
 
 "-------------------------------------------------------------------------------
 " Behavioural settings
@@ -166,7 +166,7 @@ endfunction
 
 nnoremap <F5> :set spell!<CR>
 nnoremap <F6> :set list!<CR>
-nnoremap <F7> :ToggleSpaceHi<CR>
+nnoremap <F7> :ToggleWhitespace<CR>
 nnoremap <F8> :nohlsearch<CR>
 
 set pastetoggle=<F9>
@@ -199,9 +199,6 @@ augroup vimrc_autocmd
 
   " tpp files are actually cpp files
   au BufRead,BufNewFile *.tpp setlocal filetype=cpp
-
-  " Highlight tabs and trailing spaces
-  au syntax * SpaceHi
 
   " Always start editing a file in case a swap file exists
   au SwapExists * let v:swapchoice = 'e'
