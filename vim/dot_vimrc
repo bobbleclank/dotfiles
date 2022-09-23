@@ -56,8 +56,6 @@ set expandtab
 set smarttab
 set shiftround
 
-filetype indent on
-
 set autoindent
 set nosmartindent
 set cindent
