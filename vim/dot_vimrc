@@ -110,7 +110,7 @@ set ignorecase
 set smartcase
 
 set listchars=tab:▸\ ,trail:·,precedes:←,extends:→
-set nolist
+set list
 set wrap
 set linebreak
 set showbreak=↪
