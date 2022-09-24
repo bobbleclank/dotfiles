@@ -45,6 +45,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Conquer of completion
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -101,6 +104,8 @@ highlight SignifySignDelete ctermfg=red
 
 set nottyfast
 set lazyredraw
+
+let g:coc_global_extensions = ['coc-clangd']
 
 "-------------------------------------------------------------------------------
 " Visual cues
