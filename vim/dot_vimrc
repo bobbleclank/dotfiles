@@ -48,6 +48,9 @@ Plug 'junegunn/fzf.vim'
 " Conquer of completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+" Use fzf instead of coc.nvim built-in fuzzy finder
+Plug 'antoinemadec/coc-fzf', { 'branch': 'release' }
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
