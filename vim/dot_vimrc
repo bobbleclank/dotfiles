@@ -83,7 +83,6 @@ set background=dark
 
 colorscheme default
 
-set backspace=indent,eol,start
 set nocursorline
 set nofoldenable
 set noshowmode
@@ -108,9 +107,6 @@ highlight ColorColumn ctermbg=darkgray
 highlight SignifySignAdd ctermfg=green
 highlight SignifySignChange ctermfg=yellow
 highlight SignifySignDelete ctermfg=red
-
-set nottyfast
-set lazyredraw
 
 let g:coc_global_extensions = ['coc-clangd']
 
@@ -148,11 +144,15 @@ set autoread
 set hidden
 set ttimeoutlen=0
 set updatetime=100
+set backspace=indent,eol,start
 set nostartofline
 set completeopt=longest,menuone
 set shortmess+=c
 set wildignore+=*.o
 set path=$PWD/**
+
+set lazyredraw
+set nottyfast
 
 set undofile
 set swapfile
