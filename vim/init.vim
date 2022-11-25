@@ -116,6 +116,15 @@ set spelllang=en
 set nospell
 
 "-------------------------------------------------------------------------------
+" Clang format
+"-------------------------------------------------------------------------------
+
+function! ClangFormatOnWrite()
+  let l:formatdiff = 1
+  py3file ~/clang-format.py
+endfunction
+
+"-------------------------------------------------------------------------------
 " Key mappings
 "-------------------------------------------------------------------------------
 
@@ -165,6 +174,9 @@ augroup vimrc_autocmd
   " Enable spell checking for Git commit and Markdown files
   au FileType gitcommit setlocal spell
   au FileType markdown setlocal spell
+
+  " Format cpp files on write
+  au BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
 
   " Return to last edit position when opening files
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
