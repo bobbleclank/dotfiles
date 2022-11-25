@@ -105,8 +105,8 @@ highlight SignColumn ctermbg=NONE guibg=NONE
 highlight ColorColumn ctermbg=darkgray guibg=darkgray
 
 highlight SignifySignAdd ctermfg=green
-highlight SignifySignChange ctermfg=yellow
 highlight SignifySignDelete ctermfg=red
+highlight SignifySignChange ctermfg=yellow
 
 let g:coc_global_extensions = ['coc-clangd']
 
