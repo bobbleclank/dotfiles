@@ -101,7 +101,7 @@ let g:airline_theme = 'simple'
 let g:airline#extensions#tabline#enabled = 1
 
 highlight LineNr ctermfg=darkgray
-highlight SignColumn ctermbg=none
+highlight SignColumn ctermbg=NONE
 highlight ColorColumn ctermbg=darkgray
 
 highlight SignifySignAdd ctermfg=green
