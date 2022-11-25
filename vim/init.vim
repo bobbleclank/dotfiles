@@ -76,7 +76,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-set listchars=tab:▸\ ,trail:·,precedes:←,extends:→
+set listchars=tab:▸\ ,precedes:←,extends:→
 set list
 set wrap
 set linebreak
