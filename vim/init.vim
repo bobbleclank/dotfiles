@@ -31,6 +31,10 @@ Plug 'mhinz/vim-signify'
 " Call any arbitrary Git command
 Plug 'tpope/vim-fugitive'
 
+" General-purpose command-line fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
