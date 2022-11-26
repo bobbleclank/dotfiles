@@ -28,6 +28,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Indicate added, modified and removed lines in the sign column
 Plug 'mhinz/vim-signify'
 
+" Call any arbitrary Git command
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
