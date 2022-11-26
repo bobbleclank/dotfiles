@@ -25,6 +25,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Indicate added, modified and removed lines in the sign column
+Plug 'mhinz/vim-signify'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -73,6 +76,10 @@ let g:airline#extensions#tabline#enabled = 1
 highlight LineNr ctermfg=darkgray guifg=darkgray
 highlight SignColumn ctermbg=NONE guibg=NONE
 highlight ColorColumn ctermbg=darkgray guibg=darkgray
+
+highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
+highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
+highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
 
 "-------------------------------------------------------------------------------
 " Visual cues
