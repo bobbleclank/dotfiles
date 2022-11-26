@@ -21,6 +21,10 @@ Plug 'junegunn/vim-plug'
 " Highlight trailing whitespace characters
 Plug 'ntpeters/vim-better-whitespace'
 
+" Status and tabline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -51,8 +55,8 @@ colorscheme default
 
 set nocursorline
 set nofoldenable
-set showmode
-set ruler
+set noshowmode
+set noruler
 set number
 set numberwidth=5
 set signcolumn=yes
@@ -62,6 +66,9 @@ set modeline
 set cmdheight=2
 set showtabline=2
 set laststatus=2
+
+let g:airline_theme = 'simple'
+let g:airline#extensions#tabline#enabled = 1
 
 highlight LineNr ctermfg=darkgray guifg=darkgray
 highlight SignColumn ctermbg=NONE guibg=NONE
