@@ -41,6 +41,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Use fzf instead of coc.nvim built-in fuzzy finder
 Plug 'antoinemadec/coc-fzf', { 'branch': 'release' }
 
+" Treesitter configurations and abstraction layer
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -95,6 +98,20 @@ highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
 highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
 
 let g:coc_global_extensions = ['coc-clangd']
+
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { "cpp" },
+  sync_install = false,
+  auto_install = false,
+  ignore_install = {},
+  highlight = {
+    enable = true,
+    disable = {},
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
 
 "-------------------------------------------------------------------------------
 " Visual cues
