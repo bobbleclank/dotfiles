@@ -69,6 +69,7 @@ set cinoptions=:0,l1,g0
 "-------------------------------------------------------------------------------
 
 set background=dark
+set termguicolors
 
 colorscheme default
 
