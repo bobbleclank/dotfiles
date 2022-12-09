@@ -44,6 +44,10 @@ Plug 'antoinemadec/coc-fzf', { 'branch': 'release' }
 " Treesitter configurations and abstraction layer
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
+" Themes
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'bluz71/vim-nightfly-colors'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
@@ -87,6 +91,18 @@ augroup DefaultThemeAutoCommands
 augroup END
 
 colorscheme default
+
+let g:moonflyItalics = v:true
+let g:moonflyTransparent = v:true
+let g:moonflyUndercurls = v:true
+
+colorscheme moonfly
+
+let g:nightflyItalics = v:true
+let g:nightflyTransparent = v:true
+let g:nightflyUndercurls = v:true
+
+colorscheme nightfly
 
 set nocursorline
 set nofoldenable
