@@ -218,8 +218,7 @@ augroup vimrc_autocmd
   au SwapExists * let v:swapchoice = 'e'
 
   " Enable spell checking for Git commit and Markdown files
-  au FileType gitcommit setlocal spell
-  au FileType markdown setlocal spell
+  au FileType gitcommit,markdown setlocal spell
 
   " Format cpp files on write
   au BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
