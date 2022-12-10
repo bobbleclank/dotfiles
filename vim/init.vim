@@ -47,6 +47,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 " Themes
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'bluz71/vim-nightfly-colors'
+Plug 'EdenEast/nightfox.nvim'
 
 call plug#end()
 
@@ -75,14 +76,21 @@ set cinoptions=:0,l1,g0
 set background=dark
 set termguicolors
 
-function! DefaultThemeHighlighting()
+function! ColumnHighlighting()
   highlight LineNr ctermfg=darkgray guifg=darkgray
   highlight SignColumn ctermbg=NONE guibg=NONE
   highlight ColorColumn ctermbg=darkgray guibg=darkgray
+endfunction
 
+function! SignifyHighlighting()
   highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
   highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
   highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
+endfunction
+
+function! DefaultThemeHighlighting()
+  call ColumnHighlighting()
+  call SignifyHighlighting()
 endfunction
 
 augroup DefaultThemeAutoCommands
@@ -103,6 +111,30 @@ let g:nightflyTransparent = v:true
 let g:nightflyUndercurls = v:true
 
 colorscheme nightfly
+
+function! NightfoxThemeHighlighting()
+  call SignifyHighlighting()
+endfunction
+
+augroup NightfoxThemeAutoCommands
+  autocmd!
+  au ColorScheme nightfox,duskfox,nordfox,terafox,carbonfox
+               \ call NightfoxThemeHighlighting()
+augroup END
+
+lua << EOF
+require'nightfox'.setup {
+  options = {
+    transparent = true,
+    styles = {
+      comments = "italic",
+      keywords = "NONE",
+    },
+  },
+}
+EOF
+
+colorscheme nightfox
 
 set nocursorline
 set nofoldenable
