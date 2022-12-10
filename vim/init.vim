@@ -141,7 +141,7 @@ augroup END
 
 lua << EOF
 require'tokyonight'.setup {
-  style = "storm",
+  style = "night",
   transparent = true,
   styles = {
     comments = { italic = true },
@@ -151,6 +151,8 @@ require'tokyonight'.setup {
 EOF
 
 colorscheme tokyonight
+
+colorscheme carbonfox
 
 set nocursorline
 set nofoldenable

@@ -143,6 +143,8 @@ EOF
 
 colorscheme nightfox
 
+colorscheme nightfly
+
 set nocursorline
 set nofoldenable
 set noshowmode
