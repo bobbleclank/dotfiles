@@ -48,6 +48,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'bluz71/vim-nightfly-colors'
 Plug 'EdenEast/nightfox.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()
 
@@ -135,6 +136,29 @@ require'nightfox'.setup {
 EOF
 
 colorscheme nightfox
+
+function! TokyonightThemeHighlighting()
+  call SignifyHighlighting()
+endfunction
+
+augroup TokyonightThemeAutoCommands
+  autocmd!
+  au ColorScheme tokyonight,tokyonight-storm,tokyonight-night,tokyonight-moon
+               \ call TokyonightThemeHighlighting()
+augroup END
+
+lua << EOF
+require'tokyonight'.setup {
+  style = "storm",
+  transparent = true,
+  styles = {
+    comments = { italic = true },
+    keywords = { italic = false },
+  },
+}
+EOF
+
+colorscheme tokyonight
 
 set nocursorline
 set nofoldenable
