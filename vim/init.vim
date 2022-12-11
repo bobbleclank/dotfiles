@@ -205,7 +205,7 @@ nnoremap <silent> <C-t> :tab split<CR>
 " Auto commands
 "-------------------------------------------------------------------------------
 
-augroup vimrc_autocmd
+augroup VimrcAutoCommands
   autocmd!
 
   " tpp files are actually cpp files
