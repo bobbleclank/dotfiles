@@ -1,0 +1,46 @@
+# Aliases
+#
+# -- copy, move, remove --
+alias cp='/bin/cp -iv'
+alias mv='/bin/mv -iv'
+alias rm='/bin/rm -iv'
+alias rd='/bin/rmdir -pv'
+alias rmrf='/bin/rm -rf'
+# -- change directory --
+alias -- -='cd -'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+# -- list --
+alias l='/bin/ls --color=always'
+alias ll='l -l'
+alias lla='ll -a'
+alias ll.='ll -d .*'
+# -- miscellaneous --
+alias c='clear'
+alias h='history'
+
+# Environment variables
+export EDITOR=vim
+
+# History settings
+HISTSIZE=99999
+
+# Bash completion support for core Git
+if [[ -f ~/.git-completion.bash ]]; then
+  source ~/.git-completion.bash
+fi
+
+# Bash Git prompt support
+if [[ -f ~/.git-prompt.sh ]]; then
+  PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+  GIT_PS1_SHOWDIRTYSTATE='1'
+  GIT_PS1_SHOWSTASHSTATE='1'
+  GIT_PS1_SHOWUNTRACKEDFILES='1'
+  GIT_PS1_SHOWUPSTREAM='auto'
+  GIT_PS1_STATESEPARATOR=' '
+  GIT_PS1_SHOWCONFLICTSTATE='yes'
+  GIT_PS1_DESCRIBE_STYLE='branch'
+  GIT_PS1_SHOWCOLORHINTS='1'
+  source ~/.git-prompt.sh
+fi
