@@ -156,6 +156,11 @@ set laststatus=2
 let g:airline_theme = 'simple'
 let g:airline#extensions#tabline#enabled = 1
 
+let g:signify_disable_by_default = 0
+let g:signify_sign_show_count = 1
+let g:signify_number_highlight = 0
+let g:signify_line_highlight = 0
+
 let g:coc_global_extensions = ['coc-clangd']
 
 "-------------------------------------------------------------------------------
