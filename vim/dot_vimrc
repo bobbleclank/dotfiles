@@ -123,12 +123,6 @@ let g:nightflyUndercurls = v:true
 
 colorscheme nightfly
 
-augroup NightfoxThemeAutoCommands
-  autocmd!
-  au ColorScheme nightfox,duskfox,nordfox,terafox,carbonfox
-               \ call SignifyHighlighting()
-augroup END
-
 lua << EOF
 require'nightfox'.setup {
   options = {
