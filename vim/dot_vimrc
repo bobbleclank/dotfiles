@@ -88,19 +88,19 @@ set cinoptions=:0,l1,g0
 set background=dark
 set termguicolors
 
-function! ColumnHighlighting()
+function! ColumnHighlighting() abort
   highlight LineNr ctermfg=darkgray guifg=darkgray
   highlight SignColumn ctermbg=NONE guibg=NONE
   highlight ColorColumn ctermbg=darkgray guibg=darkgray
 endfunction
 
-function! SignifyHighlighting()
+function! SignifyHighlighting() abort
   highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
   highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
   highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
 endfunction
 
-function! DefaultThemeHighlighting()
+function! DefaultThemeHighlighting() abort
   call ColumnHighlighting()
   call SignifyHighlighting()
 endfunction
@@ -231,7 +231,7 @@ let &spellfile = s:data_dir . '/spell/wordlist.utf-8.add'
 " Clang format
 "-------------------------------------------------------------------------------
 
-function! ClangFormatOnWrite()
+function! ClangFormatOnWrite() abort
   let l:formatdiff = 1
   py3file ~/clang-format.py
 endfunction
