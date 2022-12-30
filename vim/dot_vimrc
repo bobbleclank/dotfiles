@@ -154,7 +154,7 @@ set cmdheight=2
 set showtabline=2
 set laststatus=2
 
-let g:airline_theme = 'simple'
+let g:airline_theme = 'deus'
 let g:airline#extensions#tabline#enabled = 1
 
 let g:signify_disable_by_default = 0
