@@ -213,7 +213,7 @@ set matchtime=3
 set scrolloff=3
 
 let g:better_whitespace_ctermcolor = 'green'
-let g:better_whitespace_guicolor='green'
+let g:better_whitespace_guicolor = 'green'
 let g:better_whitespace_enabled = 1
 let g:strip_whitespace_on_save = 0
 
