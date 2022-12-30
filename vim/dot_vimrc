@@ -189,8 +189,7 @@ set showmatch
 set matchtime=3
 set scrolloff=3
 
-set visualbell
-set t_vb=
+set belloff=all
 
 let g:better_whitespace_ctermcolor = 'green'
 let g:better_whitespace_guicolor = 'green'
