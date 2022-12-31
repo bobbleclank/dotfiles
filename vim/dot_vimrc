@@ -212,7 +212,7 @@ set wildignore+=*.o
 set path=$PWD/**
 
 set lazyredraw
-set nottyfast
+set ttyfast
 
 set undofile
 set swapfile
