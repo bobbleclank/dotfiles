@@ -86,14 +86,14 @@ endfunction
 
 function! SignifyHighlighting() abort
   highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
-  highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
   highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
+  highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
 endfunction
 
 function! GitGutterHighlighting() abort
   highlight GitGutterAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
-  highlight GitGutterDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
   highlight GitGutterChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
+  highlight GitGutterDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
 endfunction
 
 function! DefaultThemeHighlighting() abort
