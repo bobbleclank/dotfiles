@@ -28,6 +28,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Indicate added, modified and removed lines in the sign column
 Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
+Plug 'lewis6991/gitsigns.nvim'
 
 " Call any arbitrary Git command
 Plug 'tpope/vim-fugitive'
@@ -231,7 +232,7 @@ let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#show_close_button = 0
 
-let g:signify_disable_by_default = 0
+let g:signify_disable_by_default = 1
 let g:signify_sign_show_count = 1
 let g:signify_number_highlight = 0
 let g:signify_line_highlight = 0
@@ -241,6 +242,18 @@ let g:gitgutter_signs = 1
 let g:gitgutter_highlight_linenrs = 0
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_map_keys = 0
+
+lua << EOF
+require'gitsigns'.setup {
+  signs = {
+    delete = { show_count = true },
+    topdelete = { show_count = true },
+  },
+  signcolumn = true,
+  numhl = false,
+  linehl = false,
+}
+EOF
 
 let g:coc_global_extensions = ['coc-clangd']
 
