@@ -202,6 +202,8 @@ let g:airline_section_c = airline#section#create_left(['file','readonly'])
 
 " Section Y
 let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
+let g:airline#extensions#searchcount#show_search_term = 0
+let g:airline#extensions#searchcount#search_term_limit = 20
 
 " Section Z
 let g:airline_symbols.linenr = ' '
