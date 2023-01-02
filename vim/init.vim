@@ -249,8 +249,8 @@ let g:signify_sign_show_count = 1
 let g:signify_number_highlight = 0
 let g:signify_line_highlight = 0
 
-let g:gitgutter_enabled = 0
-let g:gitgutter_signs = 1
+let g:gitgutter_enabled = 1
+let g:gitgutter_signs = 0
 let g:gitgutter_highlight_linenrs = 0
 let g:gitgutter_highlight_lines = 0
 let g:gitgutter_map_keys = 0
