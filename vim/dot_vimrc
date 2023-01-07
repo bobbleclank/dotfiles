@@ -310,8 +310,8 @@ endfunction
 " Key mappings
 "-------------------------------------------------------------------------------
 
-nnoremap <F5> :set spell!<CR>
-nnoremap <F6> :set list!<CR>
+nnoremap <F5> :set spell! spell?<CR>
+nnoremap <F6> :set list! list?<CR>
 nnoremap <F7> :ToggleWhitespace<CR>
 nnoremap <F8> :nohlsearch<CR>
 
