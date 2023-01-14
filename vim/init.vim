@@ -371,6 +371,22 @@ nnoremap <silent> <C-l> :bnext<CR>
 
 nnoremap <silent> <C-t> :tab split<CR>
 
+" fugitive mappings
+nnoremap <silent> <leader>gg :Git<CR>
+nnoremap <silent> <leader>gl :Git log --oneline<CR>
+nnoremap <silent> <leader>gb :Git blame<CR>
+nnoremap <silent> <leader>gd :Git diff<CR>
+nnoremap <silent> <leader>gs :Git diff --cached<CR>
+nnoremap <silent> <leader>ga :Git add --update<CR>
+nnoremap <silent> <leader>gc :Git commit<CR>
+nnoremap <silent> <leader>gt :Git commit --amend<CR>
+nnoremap          <leader>gr :Git rebase --interactive<space>
+nnoremap <silent> <leader>ge :Git rebase --continue<CR>
+
+nnoremap <silent> <leader>gf :Gdiffsplit<CR>
+nnoremap <silent> <leader>gv :Gvdiffsplit<CR>
+nnoremap <silent> <leader>gh :Ghdiffsplit<CR>
+
 "-------------------------------------------------------------------------------
 " Auto commands
 "-------------------------------------------------------------------------------
