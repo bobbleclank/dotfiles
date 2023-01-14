@@ -387,6 +387,34 @@ nnoremap <silent> <leader>gf :Gdiffsplit<CR>
 nnoremap <silent> <leader>gv :Gvdiffsplit<CR>
 nnoremap <silent> <leader>gh :Ghdiffsplit<CR>
 
+" fzf mappings
+nnoremap <silent> <C-p>     :Files<CR>
+nnoremap <silent> <leader>f :GFiles<CR>
+nnoremap <silent> <leader>g :GFiles?<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>h :History<CR>
+
+nnoremap          <leader>s :Rg<space>
+nnoremap <silent> <leader>w :Rg <C-r><C-w><CR>
+xnoremap <silent> <leader>v y:Rg <C-r>"<CR>
+
+nnoremap <silent> <leader>l :Lines<CR>
+nnoremap <silent> <leader>k :BLines<CR>
+
+nnoremap <silent> <leader>c :Commits<CR>
+nnoremap <silent> <leader>x :BCommits<CR>
+
+nnoremap <silent> <leader>m :Commands<CR>
+nnoremap <silent> <leader>t :Helptags<CR>
+
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+imap <C-x><C-k> <plug>(fzf-complete-word)
+imap <C-x><C-f> <plug>(fzf-complete-path)
+imap <C-x><C-l> <plug>(fzf-complete-line)
+
 "-------------------------------------------------------------------------------
 " Auto commands
 "-------------------------------------------------------------------------------
