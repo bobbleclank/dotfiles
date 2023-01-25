@@ -344,6 +344,8 @@ endfunction
 " Key mappings
 "-------------------------------------------------------------------------------
 
+let mapleader = '\'
+
 nnoremap <F5> :set spell! spell?<CR>
 nnoremap <F6> :set list! list?<CR>
 nnoremap <F7> :ToggleWhitespace<CR>
