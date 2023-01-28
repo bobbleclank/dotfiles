@@ -9,3 +9,7 @@
 	editor = vim
 [merge]
 	tool = vimdiff
+[log]
+	date = default
+[format]
+	pretty = %C(auto)%h %C(blue)%cd %C(green)%an%C(auto)%d %C(auto)%s
