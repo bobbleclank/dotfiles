@@ -1,3 +1,5 @@
 [user]
 	name = Simon Truscott
 	email = saitora@gmail.com
+[credential]
+	helper = osxkeychain
