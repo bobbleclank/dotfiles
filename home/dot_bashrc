@@ -16,6 +16,11 @@ alias l='/bin/ls --color=always'
 alias ll='l -l'
 alias lla='ll -a'
 alias ll.='ll -d .*'
+# -- tig --
+alias ti='tig'
+alias tiw='tig --since=1.week'
+alias tim='tig --since=1.month'
+alias tiy='tig --since=1.year'
 # -- miscellaneous --
 alias c='clear'
 alias h='history'
