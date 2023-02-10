@@ -9,6 +9,9 @@
 	editor = vim
 [merge]
 	tool = vimdiff
+[mergetool]
+	prompt = false
+	keepBackup = false
 [log]
 	date = default
 [format]
