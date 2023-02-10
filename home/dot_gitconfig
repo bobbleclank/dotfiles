@@ -13,6 +13,7 @@
 	prompt = false
 [merge]
 	tool = vimdiff
+	conflictStyle = merge
 [mergetool]
 	prompt = false
 	keepBackup = false
