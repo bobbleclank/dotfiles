@@ -137,9 +137,9 @@ EOF
 colorscheme nightfox
 
 function! TokyonightThemeHighlighting() abort
-  highlight SignifySignAdd ctermfg=green guifg=#399a96 cterm=NONE gui=NONE
-  highlight SignifySignChange ctermfg=yellow guifg=#6382bd cterm=NONE gui=NONE
-  highlight SignifySignDelete ctermfg=red guifg=#c25d64 cterm=NONE gui=NONE
+  highlight SignifySignAdd guifg=#399a96
+  highlight SignifySignChange guifg=#6382bd
+  highlight SignifySignDelete guifg=#c25d64
 endfunction
 
 augroup TokyonightThemeAutoCommands
