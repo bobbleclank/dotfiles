@@ -443,9 +443,9 @@ augroup VimrcAutoCommands
   au VimResized * exe "normal! \<C-w>="
 
   " Highlight the symbol and its references when holding the cursor
-  autocmd CursorHold * silent call CocActionAsync('highlight')
+  au CursorHold * silent call CocActionAsync('highlight')
 
   " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  au User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 
 augroup END
