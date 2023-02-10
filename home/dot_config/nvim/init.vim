@@ -136,16 +136,25 @@ EOF
 
 colorscheme nightfox
 
-function! TokyonightThemeHighlighting() abort
+function! TokyonightDarkThemeHighlighting() abort
   highlight SignifySignAdd guifg=#399a96
   highlight SignifySignChange guifg=#6382bd
   highlight SignifySignDelete guifg=#c25d64
 endfunction
 
+function! TokyonightLightThemeHighlighting() abort
+  highlight SignifySignAdd guifg=#627259
+  highlight SignifySignChange guifg=#485a86
+  highlight SignifySignDelete guifg=#b55a67
+endfunction
+
 augroup TokyonightThemeAutoCommands
   autocmd!
   au ColorScheme tokyonight,tokyonight-storm,tokyonight-night,tokyonight-moon
-               \ call TokyonightThemeHighlighting()
+               \ call TokyonightDarkThemeHighlighting()
+
+  au ColorScheme tokyonight-day
+               \ call TokyonightLightThemeHighlighting()
 augroup END
 
 lua << EOF
