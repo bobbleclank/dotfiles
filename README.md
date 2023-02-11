@@ -1,1 +1,13 @@
 # dotfiles
+
+```
+cd ~
+
+ln -s ~/dotfiles/home/dot_bashrc .bashrc
+ln -s ~/dotfiles/home/dot_gitconfig .gitconfig
+ln -s ~/dotfiles/home/dot_tmux.conf .tmux.conf
+ln -s ~/dotfiles/home/dot_vimrc .vimrc
+
+mkdir -p .config/nvim
+ln -s ~/dotfiles/home/dot_config/nvim/init.vim .config/nvim/init.vim
+```
