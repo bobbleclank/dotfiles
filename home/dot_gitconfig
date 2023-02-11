@@ -3,8 +3,6 @@
 	email = saitora@gmail.com
 [credential]
 	helper = osxkeychain
-[init]
-	defaultBranch = main
 [core]
 	editor = vim
 [diff]
@@ -23,3 +21,5 @@
 	date = default
 [format]
 	pretty = %C(auto)%h %C(blue)%cd %C(green)%an%C(auto)%d %C(auto)%s
+[init]
+	defaultBranch = main
