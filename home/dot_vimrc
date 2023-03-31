@@ -59,7 +59,6 @@ Plug 'antoinemadec/coc-fzf', { 'branch': 'release' }
 " Themes
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'bluz71/vim-nightfly-colors'
-Plug 'EdenEast/nightfox.nvim'
 
 call plug#end()
 
@@ -128,22 +127,6 @@ colorscheme moonfly
 let g:nightflyItalics = v:true
 let g:nightflyTransparent = v:true
 let g:nightflyUndercurls = v:true
-
-colorscheme nightfly
-
-lua << EOF
-require'nightfox'.setup {
-  options = {
-    transparent = true,
-    styles = {
-      comments = "italic",
-      keywords = "NONE",
-    },
-  },
-}
-EOF
-
-colorscheme nightfox
 
 colorscheme nightfly
 
