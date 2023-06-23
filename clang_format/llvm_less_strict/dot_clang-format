@@ -10,3 +10,4 @@ IndentAccessModifiers: false
 AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: InlineOnly
 AlwaysBreakTemplateDeclarations: Yes
+PackConstructorInitializers: Never
