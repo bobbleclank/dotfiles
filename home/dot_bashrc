@@ -41,6 +41,9 @@ alias tiy='tig --since=1.year'
 alias c='clear'
 alias h='history'
 
+# Shell options
+set -o emacs
+
 # Environment variables
 export EDITOR=vim
 
