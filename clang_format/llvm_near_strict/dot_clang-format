@@ -1,3 +1,6 @@
 BasedOnStyle: LLVM
 DerivePointerAlignment: false
 PointerAlignment: Left
+
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: InlineOnly
