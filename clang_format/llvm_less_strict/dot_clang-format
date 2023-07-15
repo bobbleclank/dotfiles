@@ -1,5 +1,4 @@
 BasedOnStyle: LLVM
-DerivePointerAlignment: false
 PointerAlignment: Left
 
 AllowShortEnumsOnASingleLine: false
@@ -10,4 +9,3 @@ PackConstructorInitializers: Never
 ColumnLimit: 120
 IndentWidth: 4
 AccessModifierOffset: -4
-IndentAccessModifiers: false
