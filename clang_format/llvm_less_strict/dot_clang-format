@@ -5,9 +5,3 @@ AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: InlineOnly
 AlwaysBreakTemplateDeclarations: Yes
 PackConstructorInitializers: Never
-
-ColumnLimit: 120
-IndentWidth: 4
-AccessModifierOffset: -4
-ContinuationIndentWidth: 8
-ConstructorInitializerIndentWidth: 8
