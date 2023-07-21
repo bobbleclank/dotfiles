@@ -5,3 +5,4 @@ AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: InlineOnly
 AlwaysBreakTemplateDeclarations: Yes
 PackConstructorInitializers: Never
+BreakBeforeBraces: Stroustrup
