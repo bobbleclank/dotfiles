@@ -61,6 +61,9 @@ Plug 'antoinemadec/coc-fzf', { 'branch': 'release' }
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'bluz71/vim-nightfly-colors'
 
+" Icons
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------

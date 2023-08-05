@@ -52,6 +52,9 @@ Plug 'bluz71/vim-nightfly-colors'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
+" Icons
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 "-------------------------------------------------------------------------------
