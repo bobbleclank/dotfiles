@@ -24,6 +24,7 @@ Plug 'ntpeters/vim-better-whitespace'
 " Status and tabline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'bluz71/nvim-linefly'
 
 " Indicate added, modified and removed lines in the sign column
 Plug 'mhinz/vim-signify'
@@ -196,7 +197,7 @@ set laststatus=2
 let g:airline_theme = 'deus'
 
 " Status line
-let g:airline_disable_statusline = 0
+let g:airline_disable_statusline = 1
 
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
@@ -229,7 +230,7 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.colnr = ' '
 
 " Tab line
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 let g:airline#extensions#tabline#show_splits = 1
 let g:airline#extensions#tabline#show_buffers = 0
@@ -255,6 +256,29 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#show_close_button = 0
+
+lua << EOF
+vim.g.linefly_options = {
+  separator_symbol = "⎪",
+  progress_symbol = "↓",
+  active_tab_symbol = "▪",
+  git_branch_symbol = "",
+  error_symbol = "E",
+  warning_symbol = "W",
+  information_symbol = "I",
+  tabline = false,
+  winbar = false,
+  with_file_icon = true,
+  with_git_branch = true,
+  with_git_status = true,
+  with_diagnostic_status = true,
+  with_session_status = false,
+  with_macro_status = true,
+  with_search_count = true,
+  with_spell_status = true,
+  with_indent_status = false,
+}
+EOF
 
 let g:signify_disable_by_default = 1
 let g:signify_sign_show_count = 1
