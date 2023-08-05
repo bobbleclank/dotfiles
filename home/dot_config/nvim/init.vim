@@ -231,7 +231,7 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.colnr = ' '
 
 " Tab line
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 
 let g:airline#extensions#tabline#show_splits = 1
 let g:airline#extensions#tabline#show_buffers = 0
