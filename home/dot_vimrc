@@ -229,6 +229,9 @@ let g:mistflyWithGitBranch = v:true
 let g:mistflyWithGitStatus = v:true
 let g:mistflyWithDiagnosticStatus = v:true
 let g:mistflyWithSessionStatus = v:false
+let g:mistflyWithMacroStatus = v:false
+let g:mistflyWithSearchCount = v:true
+let g:mistflyWithSpellStatus = v:true
 let g:mistflyWithIndentStatus = v:false
 
 let g:signify_disable_by_default = 0
