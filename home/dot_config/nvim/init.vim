@@ -260,7 +260,7 @@ let g:airline#extensions#tabline#show_close_button = 0
 
 lua << EOF
 vim.g.linefly_options = {
-  separator_symbol = "⎪",
+  separator_symbol = "",
   progress_symbol = "↓",
   active_tab_symbol = "▪",
   git_branch_symbol = "",
