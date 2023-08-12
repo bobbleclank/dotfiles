@@ -193,7 +193,7 @@ set showcmd
 set modeline
 set cmdheight=2
 set showtabline=2
-set laststatus=2
+set laststatus=3
 
 let g:airline_theme = 'deus'
 
@@ -268,7 +268,7 @@ vim.g.linefly_options = {
   warning_symbol = "W",
   information_symbol = "I",
   tabline = false,
-  winbar = false,
+  winbar = true,
   with_file_icon = true,
   with_git_branch = true,
   with_git_status = true,
