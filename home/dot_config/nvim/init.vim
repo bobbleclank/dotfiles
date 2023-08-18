@@ -55,6 +55,7 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
 
