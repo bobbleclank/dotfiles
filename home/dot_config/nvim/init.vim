@@ -44,6 +44,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Use fzf instead of coc.nvim built-in fuzzy finder
 Plug 'antoinemadec/coc-fzf', { 'branch': 'release' }
 
+" Configs for the Nvim LSP client
+Plug 'neovim/nvim-lspconfig'
+
 " Treesitter configurations and abstraction layer
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
@@ -308,6 +311,11 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
 let g:fzf_preview_window = ['up,50%', 'ctrl-/']
 
 let g:coc_global_extensions = ['coc-clangd']
+
+lua << EOF
+require'lspconfig'.clangd.setup {
+}
+EOF
 
 lua << EOF
 require'nvim-treesitter.configs'.setup {
