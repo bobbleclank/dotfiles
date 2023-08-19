@@ -488,7 +488,7 @@ omap ic <plug>(coc-classobj-i)
 xmap ac <plug>(coc-classobj-a)
 omap ac <plug>(coc-classobj-a)
 
-nnoremap <silent> <leader>ia :<C-u>CocCommand clangd.switchSourceHeader<CR>
+nnoremap <silent> <leader>ia :<C-u>ClangdSwitchSourceHeader<CR>
 
 "-------------------------------------------------------------------------------
 " Auto commands
