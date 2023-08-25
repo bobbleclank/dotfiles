@@ -81,35 +81,6 @@ set cinoptions=:0,l1,g0
 set background=dark
 set termguicolors
 
-function! ColumnHighlighting() abort
-  highlight LineNr ctermfg=darkgray guifg=darkgray
-  highlight SignColumn ctermbg=NONE guibg=NONE
-  highlight ColorColumn ctermbg=darkgray guibg=darkgray
-endfunction
-
-function! SignifyHighlighting() abort
-  highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
-  highlight SignifySignChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
-  highlight SignifySignDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
-endfunction
-
-function! GitGutterHighlighting() abort
-  highlight GitGutterAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE
-  highlight GitGutterChange ctermfg=yellow guifg=#ffff00 cterm=NONE gui=NONE
-  highlight GitGutterDelete ctermfg=red guifg=#ff0000 cterm=NONE gui=NONE
-endfunction
-
-function! DefaultThemeHighlighting() abort
-  call ColumnHighlighting()
-  call SignifyHighlighting()
-  call GitGutterHighlighting()
-endfunction
-
-augroup DefaultThemeAutoCommands
-  autocmd!
-  au ColorScheme default call DefaultThemeHighlighting()
-augroup END
-
 colorscheme default
 
 let g:moonflyItalics = v:true
