@@ -38,12 +38,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Conquer of completion
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-
-" Use fzf instead of coc.nvim built-in fuzzy finder
-Plug 'antoinemadec/coc-fzf', { 'branch': 'release' }
-
 " Configs for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
 
@@ -310,8 +304,6 @@ EOF
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
 let g:fzf_preview_window = ['up,50%', 'ctrl-/']
 
-let g:coc_global_extensions = ['coc-clangd']
-
 lua << EOF
 require'lspconfig'.clangd.setup {
 }
@@ -465,16 +457,6 @@ omap <leader><tab> <plug>(fzf-maps-o)
 imap <C-x><C-k> <plug>(fzf-complete-word)
 imap <C-x><C-f> <plug>(fzf-complete-path)
 imap <C-x><C-l> <plug>(fzf-complete-line)
-
-" coc mappings
-xmap if <plug>(coc-funcobj-i)
-omap if <plug>(coc-funcobj-i)
-xmap af <plug>(coc-funcobj-a)
-omap af <plug>(coc-funcobj-a)
-xmap ic <plug>(coc-classobj-i)
-omap ic <plug>(coc-classobj-i)
-xmap ac <plug>(coc-classobj-a)
-omap ac <plug>(coc-classobj-a)
 
 " lsp mappings
 lua << EOF
