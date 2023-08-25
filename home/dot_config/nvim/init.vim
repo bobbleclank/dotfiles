@@ -467,23 +467,6 @@ imap <C-x><C-f> <plug>(fzf-complete-path)
 imap <C-x><C-l> <plug>(fzf-complete-line)
 
 " coc mappings
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
-
-nnoremap <silent> <leader>q :<C-u>CocList diagnostics<CR>
-
-nmap <silent> gd <plug>(coc-definition)
-nmap <silent> gy <plug>(coc-type-definition)
-nmap <silent> gi <plug>(coc-implementation)
-nmap <silent> gc <plug>(coc-declaration)
-nmap <silent> gr <plug>(coc-references)
-
-nmap <silent> K :call CocActionAsync('doHover')<CR>
-
-nmap <leader>rn <Plug>(coc-rename)
-
-nmap <leader>ca <plug>(coc-codeaction-cursor)
-
 xmap if <plug>(coc-funcobj-i)
 omap if <plug>(coc-funcobj-i)
 xmap af <plug>(coc-funcobj-a)
@@ -492,6 +475,46 @@ xmap ic <plug>(coc-classobj-i)
 omap ic <plug>(coc-classobj-i)
 xmap ac <plug>(coc-classobj-a)
 omap ac <plug>(coc-classobj-a)
+
+" lsp mappings
+lua << EOF
+-- Global mappings
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+
+-- Use LspAttach autocommand to only map the following keys
+-- after the language server attaches to the current buffer
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  callback = function(ev)
+    -- Enable completion triggered by <c-x><c-o>
+    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+    -- Buffer local mappings
+    local opts = { buffer = ev.buf }
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'gy', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', 'gc', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+
+    vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
+      group = 'UserLspConfig',
+      callback = function() vim.lsp.buf.document_highlight() end,
+    })
+    vim.api.nvim_create_autocmd({'CursorMoved'}, {
+      group = 'UserLspConfig',
+      callback = function() vim.lsp.buf.clear_references() end,
+    })
+  end,
+})
+EOF
 
 nnoremap <silent> <leader>ia :<C-u>ClangdSwitchSourceHeader<CR>
 
@@ -525,11 +548,5 @@ augroup VimrcAutoCommands
 
   " Resize splits when the window is resized
   au VimResized * exe "normal! \<C-w>="
-
-  " Highlight the symbol and its references when holding the cursor
-  au CursorHold,CursorHoldI * silent call CocActionAsync('highlight')
-
-  " Update signature help on jump placeholder
-  au User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 
 augroup END
