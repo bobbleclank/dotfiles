@@ -483,8 +483,6 @@ nmap <silent> K :call CocActionAsync('doHover')<CR>
 nmap <leader>rn <Plug>(coc-rename)
 
 nmap <leader>ac <plug>(coc-codeaction-cursor)
-nmap <leader>as <plug>(coc-codeaction-source)
-nmap <leader>qf <plug>(coc-fix-current)
 
 xmap if <plug>(coc-funcobj-i)
 omap if <plug>(coc-funcobj-i)
