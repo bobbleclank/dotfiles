@@ -27,7 +27,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bluz71/nvim-linefly'
 
 " Indicate added, modified and removed lines in the sign column
-Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
 Plug 'lewis6991/gitsigns.nvim'
 
@@ -108,27 +107,6 @@ require'nightfox'.setup {
 EOF
 
 colorscheme nightfox
-
-function! TokyonightDarkThemeHighlighting() abort
-  highlight SignifySignAdd guifg=#399a96
-  highlight SignifySignChange guifg=#6382bd
-  highlight SignifySignDelete guifg=#c25d64
-endfunction
-
-function! TokyonightLightThemeHighlighting() abort
-  highlight SignifySignAdd guifg=#627259
-  highlight SignifySignChange guifg=#485a86
-  highlight SignifySignDelete guifg=#b55a67
-endfunction
-
-augroup TokyonightThemeAutoCommands
-  autocmd!
-  au ColorScheme tokyonight,tokyonight-storm,tokyonight-night,tokyonight-moon
-               \ call TokyonightDarkThemeHighlighting()
-
-  au ColorScheme tokyonight-day
-               \ call TokyonightLightThemeHighlighting()
-augroup END
 
 lua << EOF
 require'tokyonight'.setup {
@@ -248,11 +226,6 @@ vim.g.linefly_options = {
   with_indent_status = false,
 }
 EOF
-
-let g:signify_disable_by_default = 1
-let g:signify_sign_show_count = 1
-let g:signify_number_highlight = 0
-let g:signify_line_highlight = 0
 
 let g:gitgutter_enabled = 0
 let g:gitgutter_signs = 1
