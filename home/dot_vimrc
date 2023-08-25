@@ -393,6 +393,11 @@ imap <C-x><C-f> <plug>(fzf-complete-path)
 imap <C-x><C-l> <plug>(fzf-complete-line)
 
 " coc mappings
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
+
+nnoremap <silent> <leader>q :<C-u>CocList diagnostics<CR>
+
 nmap <silent> gd <plug>(coc-definition)
 nmap <silent> gy <plug>(coc-type-definition)
 nmap <silent> gi <plug>(coc-implementation)
@@ -400,6 +405,8 @@ nmap <silent> gc <plug>(coc-declaration)
 nmap <silent> gr <plug>(coc-references)
 
 nmap <silent> K :call CocActionAsync('doHover')<CR>
+
+nmap <leader>rn <Plug>(coc-rename)
 
 nmap <leader>ac <plug>(coc-codeaction-cursor)
 nmap <leader>as <plug>(coc-codeaction-source)
