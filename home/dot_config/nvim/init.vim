@@ -538,9 +538,6 @@ augroup VimrcAutoCommands
   " Enable spell checking for Git commit and Markdown files
   au FileType gitcommit,markdown setlocal spell
 
-  " Format cpp files on write
-  au BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
-
   " Return to last edit position when opening files
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                \ |   exe "normal! g`\""
@@ -548,5 +545,8 @@ augroup VimrcAutoCommands
 
   " Resize splits when the window is resized
   au VimResized * exe "normal! \<C-w>="
+
+  " Format cpp files on write
+  au BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
 
 augroup END
