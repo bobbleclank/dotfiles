@@ -47,7 +47,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'bluz71/vim-nightfly-colors'
 Plug 'EdenEast/nightfox.nvim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'folke/tokyonight.nvim',
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
