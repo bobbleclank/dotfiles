@@ -49,7 +49,6 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'folke/tokyonight.nvim',
 
 " Icons
-Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
