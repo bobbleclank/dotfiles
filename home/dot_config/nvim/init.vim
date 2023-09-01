@@ -22,8 +22,6 @@ Plug 'junegunn/vim-plug'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Status and tabline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'bluz71/nvim-linefly'
 Plug 'nanozuki/tabby.nvim'
 
@@ -141,69 +139,6 @@ set modeline
 set cmdheight=2
 set showtabline=2
 set laststatus=3
-
-let g:airline_theme = 'deus'
-
-" Status line
-let g:airline_disable_statusline = 1
-
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols_ascii = 1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" Section A
-let g:airline_detect_spelllang = 0
-
-" Section B
-let g:airline_symbols.branch = ''
-let g:airline#extensions#branch#format = 2
-let g:airline#extensions#branch#sha1_len = 10
-
-" Section C
-let g:airline_stl_path_style = 'short'
-let g:airline_section_c_only_filename = 1
-let g:airline_section_c = airline#section#create_left(['file','readonly'])
-
-" Section Y
-let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
-let g:airline#extensions#searchcount#show_search_term = 0
-let g:airline#extensions#searchcount#search_term_limit = 20
-
-" Section Z
-let g:airline_symbols.linenr = ' '
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.colnr = ' '
-
-" Tab line
-let g:airline#extensions#tabline#enabled = 0
-
-let g:airline#extensions#tabline#show_splits = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#show_tab_count = 1
-
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#show_tab_nr = 1
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#overflow_marker = '…'
-
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#fnamecollapse = 1
-let g:airline#extensions#tabline#tabtitle_formatter = 'TabTitleFormatter'
-
-function TabTitleFormatter(n) abort
-  return ' '
-endfunction
-
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-let g:airline#extensions#tabline#show_close_button = 0
 
 lua << EOF
 require('tabby.tabline').use_preset('active_wins_at_tail', {
