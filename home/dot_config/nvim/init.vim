@@ -25,6 +25,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bluz71/nvim-linefly'
+Plug 'nanozuki/tabby.nvim'
 
 " Indicate added, modified and removed lines in the sign column
 Plug 'airblade/vim-gitgutter'
@@ -177,7 +178,7 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.colnr = ' '
 
 " Tab line
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 
 let g:airline#extensions#tabline#show_splits = 1
 let g:airline#extensions#tabline#show_buffers = 0
@@ -203,6 +204,12 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#show_close_button = 0
+
+lua << EOF
+require('tabby.tabline').use_preset('active_wins_at_tail', {
+  nerdfont = true,
+})
+EOF
 
 lua << EOF
 vim.g.linefly_options = {
