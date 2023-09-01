@@ -2,6 +2,197 @@
 " Plugin manager
 "-------------------------------------------------------------------------------
 
+lua << EOF
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = [[\]]
+
+require('lazy').setup({
+  -- Highlight trailing whitespace characters
+  {
+    'ntpeters/vim-better-whitespace',
+    init = function()
+      vim.g.better_whitespace_ctermcolor = 'green'
+      vim.g.better_whitespace_guicolor = 'green'
+      vim.g.better_whitespace_enabled = 1
+      vim.g.strip_whitespace_on_save = 0
+    end,
+  },
+
+  -- Status and tabline
+  {
+    'bluz71/nvim-linefly',
+    init = function()
+      vim.g.linefly_options = {
+        separator_symbol = "",
+        progress_symbol = "↓",
+        active_tab_symbol = "▪",
+        git_branch_symbol = "",
+        error_symbol = "E",
+        warning_symbol = "W",
+        information_symbol = "I",
+        tabline = false,
+        winbar = true,
+        with_file_icon = true,
+        with_git_branch = true,
+        with_git_status = true,
+        with_diagnostic_status = true,
+        with_session_status = false,
+        with_macro_status = true,
+        with_search_count = true,
+        with_spell_status = true,
+        with_indent_status = false,
+      }
+    end,
+  },
+  {
+    'nanozuki/tabby.nvim',
+    config = function()
+      require('tabby.tabline').use_preset('active_wins_at_tail', {
+        nerdfont = true,
+      })
+    end,
+  },
+
+  -- Indicate added, modified and removed lines in the sign column
+  {
+    'airblade/vim-gitgutter',
+    init = function()
+      vim.g.gitgutter_enabled = 0
+      vim.g.gitgutter_signs = 1
+      vim.g.gitgutter_highlight_linenrs = 0
+      vim.g.gitgutter_highlight_lines = 0
+      vim.g.gitgutter_map_keys = 0
+    end,
+  },
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup({
+        signs = {
+          delete = { show_count = true },
+          topdelete = { show_count = true },
+        },
+        signcolumn = true,
+        numhl = false,
+        linehl = false,
+      })
+    end,
+  },
+
+  -- Call any arbitrary Git command
+  { 'tpope/vim-fugitive' },
+
+  -- General-purpose command-line fuzzy finder
+  {
+    'junegunn/fzf',
+    build = './install --all',
+  },
+  {
+    'junegunn/fzf.vim',
+    init = function()
+      vim.g['fzf_layout'] = { window = { width = 0.9, height = 0.9 } }
+      vim.g['fzf_preview_window'] = { 'up,50%', 'ctrl-/' }
+    end,
+  },
+
+  -- Configs for the Nvim LSP client
+  {
+    'neovim/nvim-lspconfig',
+    config = function()
+      require('lspconfig').clangd.setup({})
+    end,
+  },
+
+  -- Treesitter configurations and abstraction layer
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        ensure_installed = { "cpp" },
+        sync_install = false,
+        auto_install = false,
+        ignore_install = {},
+        highlight = {
+          enable = true,
+          disable = {},
+          additional_vim_regex_highlighting = false,
+        },
+      })
+    end,
+  },
+
+  -- Themes
+  {
+    'bluz71/vim-moonfly-colors',
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.g.moonflyItalics = true
+      vim.g.moonflyTransparent = true
+      vim.g.moonflyUndercurls = true
+    end,
+  },
+  {
+    'bluz71/vim-nightfly-colors',
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.g.nightflyItalics = true
+      vim.g.nightflyTransparent = true
+      vim.g.nightflyUndercurls = true
+    end,
+  },
+  {
+    'EdenEast/nightfox.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('nightfox').setup({
+        options = {
+          transparent = true,
+          styles = {
+            comments = "italic",
+            keywords = "NONE",
+          },
+        },
+      })
+      vim.cmd([[colorscheme carbonfox]])
+    end,
+  },
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('tokyonight').setup({
+        style = "night",
+        transparent = true,
+        styles = {
+          comments = { italic = true },
+          keywords = { italic = false },
+        },
+      })
+    end,
+  },
+
+  -- Icons
+  { 'nvim-tree/nvim-web-devicons' },
+})
+EOF
+
 let s:data_dir = stdpath('data') . '/site'
 let s:plugin_dir = s:data_dir . '/plugged'
 let s:plug_file = s:data_dir . '/autoload/plug.vim'
@@ -17,39 +208,6 @@ call plug#begin(s:plugin_dir)
 
 " Vim help for plugin manager
 Plug 'junegunn/vim-plug'
-
-" Highlight trailing whitespace characters
-Plug 'ntpeters/vim-better-whitespace'
-
-" Status and tabline
-Plug 'bluz71/nvim-linefly'
-Plug 'nanozuki/tabby.nvim'
-
-" Indicate added, modified and removed lines in the sign column
-Plug 'airblade/vim-gitgutter'
-Plug 'lewis6991/gitsigns.nvim'
-
-" Call any arbitrary Git command
-Plug 'tpope/vim-fugitive'
-
-" General-purpose command-line fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" Configs for the Nvim LSP client
-Plug 'neovim/nvim-lspconfig'
-
-" Treesitter configurations and abstraction layer
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-
-" Themes
-Plug 'bluz71/vim-moonfly-colors'
-Plug 'bluz71/vim-nightfly-colors'
-Plug 'EdenEast/nightfox.nvim'
-Plug 'folke/tokyonight.nvim',
-
-" Icons
-Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
 
@@ -78,49 +236,6 @@ set cinoptions=:0,l1,g0
 set background=dark
 set termguicolors
 
-colorscheme default
-
-let g:moonflyItalics = v:true
-let g:moonflyTransparent = v:true
-let g:moonflyUndercurls = v:true
-
-colorscheme moonfly
-
-let g:nightflyItalics = v:true
-let g:nightflyTransparent = v:true
-let g:nightflyUndercurls = v:true
-
-colorscheme nightfly
-
-lua << EOF
-require'nightfox'.setup {
-  options = {
-    transparent = true,
-    styles = {
-      comments = "italic",
-      keywords = "NONE",
-    },
-  },
-}
-EOF
-
-colorscheme nightfox
-
-lua << EOF
-require'tokyonight'.setup {
-  style = "night",
-  transparent = true,
-  styles = {
-    comments = { italic = true },
-    keywords = { italic = false },
-  },
-}
-EOF
-
-colorscheme tokyonight
-
-colorscheme carbonfox
-
 "-------------------------------------------------------------------------------
 " UI settings
 "-------------------------------------------------------------------------------
@@ -138,75 +253,6 @@ set modeline
 set cmdheight=2
 set showtabline=2
 set laststatus=3
-
-lua << EOF
-require('tabby.tabline').use_preset('active_wins_at_tail', {
-  nerdfont = true,
-})
-EOF
-
-lua << EOF
-vim.g.linefly_options = {
-  separator_symbol = "",
-  progress_symbol = "↓",
-  active_tab_symbol = "▪",
-  git_branch_symbol = "",
-  error_symbol = "E",
-  warning_symbol = "W",
-  information_symbol = "I",
-  tabline = false,
-  winbar = true,
-  with_file_icon = true,
-  with_git_branch = true,
-  with_git_status = true,
-  with_diagnostic_status = true,
-  with_session_status = false,
-  with_macro_status = true,
-  with_search_count = true,
-  with_spell_status = true,
-  with_indent_status = false,
-}
-EOF
-
-let g:gitgutter_enabled = 0
-let g:gitgutter_signs = 1
-let g:gitgutter_highlight_linenrs = 0
-let g:gitgutter_highlight_lines = 0
-let g:gitgutter_map_keys = 0
-
-lua << EOF
-require'gitsigns'.setup {
-  signs = {
-    delete = { show_count = true },
-    topdelete = { show_count = true },
-  },
-  signcolumn = true,
-  numhl = false,
-  linehl = false,
-}
-EOF
-
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
-let g:fzf_preview_window = ['up,50%', 'ctrl-/']
-
-lua << EOF
-require'lspconfig'.clangd.setup {
-}
-EOF
-
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "cpp" },
-  sync_install = false,
-  auto_install = false,
-  ignore_install = {},
-  highlight = {
-    enable = true,
-    disable = {},
-    additional_vim_regex_highlighting = false,
-  },
-}
-EOF
 
 "-------------------------------------------------------------------------------
 " Visual cues
@@ -226,11 +272,6 @@ set breakindent
 set showmatch
 set matchtime=3
 set scrolloff=3
-
-let g:better_whitespace_ctermcolor = 'green'
-let g:better_whitespace_guicolor = 'green'
-let g:better_whitespace_enabled = 1
-let g:strip_whitespace_on_save = 0
 
 "-------------------------------------------------------------------------------
 " Behavioural settings
@@ -268,8 +309,6 @@ endfunction
 "-------------------------------------------------------------------------------
 " Key mappings
 "-------------------------------------------------------------------------------
-
-let mapleader = '\'
 
 nnoremap <F5> :set spell! spell?<CR>
 nnoremap <F6> :set list! list?<CR>
