@@ -252,7 +252,7 @@ vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.opt.listchars = { tab = '▸ ', trail = '·', extends = '→', precedes = '←' }
+vim.opt.listchars = { tab = '▸ ', trail = '‧', extends = '→', precedes = '←' }
 vim.o.list = true
 vim.o.wrap = true
 vim.o.linebreak = true
