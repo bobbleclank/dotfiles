@@ -199,85 +199,95 @@ EOF
 " Text formatting
 "-------------------------------------------------------------------------------
 
-set tabstop=8
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set smarttab
-set shiftround
+lua << EOF
+vim.o.tabstop = 8
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.smarttab = true
+vim.o.shiftround = true
 
-set autoindent
-set nosmartindent
-set cindent
-set cinoptions=:0,l1,g0
+vim.o.autoindent = true
+vim.o.smartindent = false
+vim.o.cindent = true
+vim.opt.cinoptions = { ':0', 'l1', 'g0' }
+EOF
 
 "-------------------------------------------------------------------------------
 " Color scheme
 "-------------------------------------------------------------------------------
 
-set background=dark
-set termguicolors
+lua << EOF
+vim.o.background = 'dark'
+vim.o.termguicolors = true
+EOF
 
 "-------------------------------------------------------------------------------
 " UI settings
 "-------------------------------------------------------------------------------
 
-set nocursorline
-set nofoldenable
-set noshowmode
-set noruler
-set number
-set numberwidth=5
-set signcolumn=yes
-set colorcolumn=
-set showcmd
-set modeline
-set cmdheight=2
-set showtabline=2
-set laststatus=3
+lua << EOF
+vim.o.cursorline = false
+vim.o.foldenable = false
+vim.o.showmode = false
+vim.o.ruler = false
+vim.o.number = true
+vim.o.numberwidth = 5
+vim.o.signcolumn = 'yes'
+vim.opt.colorcolumn = {}
+vim.o.showcmd = true
+vim.o.modeline = true
+vim.o.cmdheight = 2
+vim.o.showtabline = 2
+vim.o.laststatus = 3
+EOF
 
 "-------------------------------------------------------------------------------
 " Visual cues
 "-------------------------------------------------------------------------------
 
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
+lua << EOF
+vim.o.hlsearch = true
+vim.o.incsearch = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
-set listchars=tab:▸\ ,extends:→,precedes:←
-set list
-set wrap
-set linebreak
-set showbreak=↪
-set breakindent
-set showmatch
-set matchtime=3
-set scrolloff=3
+vim.opt.listchars = { tab = '▸ ', extends = '→', precedes = '←' }
+vim.o.list = true
+vim.o.wrap = true
+vim.o.linebreak = true
+vim.o.showbreak = '↪'
+vim.o.breakindent = true
+vim.o.showmatch = true
+vim.o.matchtime = 3
+vim.o.scrolloff = 3
+EOF
 
 "-------------------------------------------------------------------------------
 " Behavioural settings
 "-------------------------------------------------------------------------------
 
-set autoread
-set hidden
-set ttimeoutlen=0
-set updatetime=100
-set backspace=indent,eol,start
-set nostartofline
-set completeopt=menuone,longest
-set shortmess+=c
-set wildignore^=*.o
-set path=$PWD/**
+lua << EOF
+vim.o.autoread = true
+vim.o.hidden = true
+vim.o.ttimeoutlen = 0
+vim.o.updatetime = 100
+vim.opt.backspace = { 'indent', 'eol', 'start' }
+vim.o.startofline = false
+vim.opt.completeopt = { 'menuone', 'longest' }
+vim.opt.shortmess:append({ c = true })
+vim.opt.wildignore:prepend({ '*.o' })
+vim.o.path = vim.env.PWD .. '/**'
 
-set lazyredraw
+vim.o.lazyredraw = true
 
-set undofile
-set swapfile
-set nobackup
-set nowritebackup
-set spelllang=en
-set nospell
+vim.o.undofile = true
+vim.o.swapfile = true
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.spelllang = 'en'
+vim.o.spell = false
+EOF
 
 "-------------------------------------------------------------------------------
 " Clang format
