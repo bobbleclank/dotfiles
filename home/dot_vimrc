@@ -145,7 +145,7 @@ set noruler
 set number
 set numberwidth=5
 set signcolumn=yes
-set colorcolumn=
+set colorcolumn=81,82
 set showcmd
 set modeline
 set cmdheight=2
