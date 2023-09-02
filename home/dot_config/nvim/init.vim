@@ -256,7 +256,7 @@ vim.opt.listchars = { tab = '▸ ', trail = '‧', extends = '»', precedes = '�
 vim.o.list = true
 vim.o.wrap = true
 vim.o.linebreak = true
-vim.o.showbreak = '↪'
+vim.o.showbreak = '↳'
 vim.o.breakindent = true
 vim.o.showmatch = true
 vim.o.matchtime = 3
