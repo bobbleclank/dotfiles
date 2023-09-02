@@ -267,7 +267,7 @@ set backspace=indent,eol,start
 set nostartofline
 set completeopt=menuone,longest
 set shortmess+=c
-set wildignore+=*.o
+set wildignore^=*.o
 set path=$PWD/**
 
 set lazyredraw
