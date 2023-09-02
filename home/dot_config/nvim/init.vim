@@ -193,24 +193,6 @@ require('lazy').setup({
 })
 EOF
 
-let s:data_dir = stdpath('data') . '/site'
-let s:plugin_dir = s:data_dir . '/plugged'
-let s:plug_file = s:data_dir . '/autoload/plug.vim'
-
-if empty(glob(s:plug_file))
-  silent execute '!curl -fLo ' . s:plug_file . ' --create-dirs -k ' .
-    \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * ++once PlugInstall --sync
-                 \ | source $MYVIMRC
-endif
-
-call plug#begin(s:plugin_dir)
-
-" Vim help for plugin manager
-Plug 'junegunn/vim-plug'
-
-call plug#end()
-
 "-------------------------------------------------------------------------------
 " Text formatting
 "-------------------------------------------------------------------------------
