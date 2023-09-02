@@ -275,7 +275,7 @@ vim.o.updatetime = 100
 vim.opt.backspace = { 'indent', 'eol', 'start' }
 vim.o.startofline = false
 vim.opt.completeopt = { 'menuone', 'longest' }
-vim.opt.shortmess:append({ c = true })
+vim.opt.shortmess:append({ c = true, I = true })
 vim.opt.wildignore:prepend({ '*.o' })
 vim.o.path = vim.env.PWD .. '/**'
 

@@ -286,7 +286,7 @@ set updatetime=100
 set backspace=indent,eol,start
 set nostartofline
 set completeopt=menuone,longest
-set shortmess+=c
+set shortmess+=cI
 set wildignore^=*.o
 set path=$PWD/**
 
