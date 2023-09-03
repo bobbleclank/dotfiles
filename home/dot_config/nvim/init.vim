@@ -307,8 +307,6 @@ nnoremap <F6> :set list! list?<CR>
 nnoremap <F7> :ToggleWhitespace<CR>
 nnoremap <F8> :nohlsearch<CR>
 
-set pastetoggle=<F9>
-
 inoremap jk <ESC>
 
 nnoremap j gj
