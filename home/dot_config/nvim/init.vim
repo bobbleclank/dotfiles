@@ -451,6 +451,6 @@ augroup VimrcAutoCommands
   au VimResized * exe "normal! \<C-w>="
 
   " Format cpp files on write
-  au BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
+  au BufWritePre *.h,*.hpp,*.tpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
 
 augroup END
