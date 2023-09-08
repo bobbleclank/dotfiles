@@ -328,22 +328,24 @@ vim.keymap.set('n', '<C-l>', ':bnext<CR>', { silent = true })
 vim.keymap.set('n', '<C-t>', ':tab split<CR>', { silent = true })
 EOF
 
-" fugitive mappings
-nnoremap <silent> <leader>gg :Git<CR>
-nnoremap <silent> <leader>gl :Git log<CR>
-nnoremap <silent> <leader>gb :Git blame<CR>
-nnoremap <silent> <leader>gd :Git diff<CR>
-nnoremap <silent> <leader>gs :Git diff --cached<CR>
-nnoremap <silent> <leader>ga :Git add<CR>
-nnoremap <silent> <leader>gu :Git add --update<CR>
-nnoremap <silent> <leader>gc :Git commit<CR>
-nnoremap <silent> <leader>gm :Git commit --amend<CR>
-nnoremap          <leader>gr :Git rebase --interactive<space>
-nnoremap <silent> <leader>gt :Git rebase --continue<CR>
+lua << EOF
+-- fugitive mappings
+vim.keymap.set('n', '<leader>gg', ':Git<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gl', ':Git log<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gb', ':Git blame<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gd', ':Git diff<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gs', ':Git diff --cached<CR>', { silent = true })
+vim.keymap.set('n', '<leader>ga', ':Git add<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gu', ':Git add --update<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gc', ':Git commit<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gm', ':Git commit --amend<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gr', ':Git rebase --interactive<space>')
+vim.keymap.set('n', '<leader>gt', ':Git rebase --continue<CR>', { silent = true })
 
-nnoremap <silent> <leader>gf :Gdiffsplit<CR>
-nnoremap <silent> <leader>gv :Gvdiffsplit<CR>
-nnoremap <silent> <leader>gh :Ghdiffsplit<CR>
+vim.keymap.set('n', '<leader>gf', ':Gdiffsplit<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gv', ':Gvdiffsplit<CR>', { silent = true })
+vim.keymap.set('n', '<leader>gh', ':Ghdiffsplit<CR>', { silent = true })
+EOF
 
 " fzf mappings
 nnoremap <silent> <C-p>     :Files<CR>
