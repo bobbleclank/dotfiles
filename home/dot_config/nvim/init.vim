@@ -436,11 +436,11 @@ augroup VimrcAutoCommands
   au FileType cmake setlocal softtabstop=2
   au FileType cmake setlocal shiftwidth=2
 
-  " Always start editing a file in case a swap file exists
-  au SwapExists * let v:swapchoice = 'e'
-
   " Enable spell checking for Git commit and Markdown files
   au FileType gitcommit,markdown setlocal spell
+
+  " Always start editing a file in case a swap file exists
+  au SwapExists * let v:swapchoice = 'e'
 
   " Return to last edit position when opening files
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
