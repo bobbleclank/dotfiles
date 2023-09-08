@@ -302,29 +302,31 @@ endfunction
 " Key mappings
 "-------------------------------------------------------------------------------
 
-nnoremap <F5> :set spell! spell?<CR>
-nnoremap <F6> :set list! list?<CR>
-nnoremap <F7> :ToggleWhitespace<CR>
-nnoremap <F8> :nohlsearch<CR>
+lua << EOF
+vim.keymap.set('n', '<F5>', ':set spell! spell?<CR>')
+vim.keymap.set('n', '<F6>', ':set list! list?<CR>')
+vim.keymap.set('n', '<F7>', ':ToggleWhitespace<CR>')
+vim.keymap.set('n', '<F8>', ':nohlsearch<CR>')
 
-inoremap jk <ESC>
+vim.keymap.set('i', 'jk', '<ESC>')
 
-nnoremap j gj
-nnoremap k gk
+vim.keymap.set('n', 'j', 'gj')
+vim.keymap.set('n', 'k', 'gk')
 
-vnoremap < <gv
-vnoremap > >gv
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
 
-" Map Y to copy to the end of the line
-map Y y$
+-- Map Y to copy to the end of the line
+vim.keymap.set('', 'Y', 'y$', { remap = true })
 
-" Remap Q to do nothing instead of entering Ex mode
-nnoremap Q <nop>
+-- Remap Q to do nothing instead of entering Ex mode
+vim.keymap.set('n', 'Q', '<nop>')
 
-nnoremap <silent> <C-h> :bprevious<CR>
-nnoremap <silent> <C-l> :bnext<CR>
+vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { silent = true })
+vim.keymap.set('n', '<C-l>', ':bnext<CR>', { silent = true })
 
-nnoremap <silent> <C-t> :tab split<CR>
+vim.keymap.set('n', '<C-t>', ':tab split<CR>', { silent = true })
+EOF
 
 " fugitive mappings
 nnoremap <silent> <leader>gg :Git<CR>
