@@ -418,7 +418,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 EOF
 
-nnoremap <silent> <leader>ia :<C-u>ClangdSwitchSourceHeader<CR>
+lua << EOF
+vim.keymap.set('n', '<leader>ia', ':<C-u>ClangdSwitchSourceHeader<CR>', { silent = true })
+EOF
 
 "-------------------------------------------------------------------------------
 " Auto commands
