@@ -433,8 +433,8 @@ augroup VimrcAutoCommands
   au BufNewFile,BufRead *.tpp setlocal filetype=cpp
 
   " Modify default number of spaces that a <Tab> counts for
-  au FileType cmake setlocal softtabstop=2
-  au FileType cmake setlocal shiftwidth=2
+  au FileType cmake,lua,vim setlocal softtabstop=2
+  au FileType cmake,lua,vim setlocal shiftwidth=2
 
   " Enable spell checking for Git commit and Markdown files
   au FileType gitcommit,markdown setlocal spell
