@@ -429,7 +429,7 @@ augroup VimrcAutoCommands
   autocmd!
 
   " tpp files are actually cpp files
-  au BufRead,BufNewFile *.tpp setlocal filetype=cpp
+  au BufNewFile,BufRead *.tpp setlocal filetype=cpp
 
   " Modify default number of spaces that a <Tab> counts for
   au FileType cmake setlocal softtabstop=2
