@@ -347,33 +347,35 @@ vim.keymap.set('n', '<leader>gv', ':Gvdiffsplit<CR>', { silent = true })
 vim.keymap.set('n', '<leader>gh', ':Ghdiffsplit<CR>', { silent = true })
 EOF
 
-" fzf mappings
-nnoremap <silent> <C-p>     :Files<CR>
-nnoremap <silent> <leader>f :GFiles<CR>
-nnoremap <silent> <leader>g :GFiles?<CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>h :History<CR>
+lua << EOF
+-- fzf mappings
+vim.keymap.set('n', '<C-p>', ':Files<CR>', { silent = true })
+vim.keymap.set('n', '<leader>f', ':GFiles<CR>', { silent = true })
+vim.keymap.set('n', '<leader>g', ':GFiles?<CR>', { silent = true })
+vim.keymap.set('n', '<leader>b', ':Buffers<CR>', { silent = true })
+vim.keymap.set('n', '<leader>h', ':History<CR>', { silent = true })
 
-nnoremap          <leader>s :Rg<space>
-nnoremap <silent> <leader>w :Rg <C-r><C-w><CR>
-xnoremap <silent> <leader>v y:Rg <C-r>"<CR>
+vim.keymap.set('n', '<leader>s', ':Rg<space>')
+vim.keymap.set('n', '<leader>w', ':Rg <C-r><C-w><CR>', { silent = true })
+vim.keymap.set('x', '<leader>v', 'y:Rg <C-r>"<CR>', { silent = true })
 
-nnoremap <silent> <leader>l :Lines<CR>
-nnoremap <silent> <leader>k :BLines<CR>
+vim.keymap.set('n', '<leader>l', ':Lines<CR>', { silent = true })
+vim.keymap.set('n', '<leader>k', ':BLines<CR>', { silent = true })
 
-nnoremap <silent> <leader>c :Commits<CR>
-nnoremap <silent> <leader>x :BCommits<CR>
+vim.keymap.set('n', '<leader>c', ':Commits<CR>', { silent = true })
+vim.keymap.set('n', '<leader>x', ':BCommits<CR>', { silent = true })
 
-nnoremap <silent> <leader>m :Commands<CR>
-nnoremap <silent> <leader>t :Helptags<CR>
+vim.keymap.set('n', '<leader>m', ':Commands<CR>', { silent = true })
+vim.keymap.set('n', '<leader>t', ':Helptags<CR>', { silent = true })
 
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
+vim.keymap.set('n', '<leader><tab>', '<plug>(fzf-maps-n)', { remap = true })
+vim.keymap.set('x', '<leader><tab>', '<plug>(fzf-maps-x)', { remap = true })
+vim.keymap.set('o', '<leader><tab>', '<plug>(fzf-maps-o)', { remap = true })
 
-imap <C-x><C-k> <plug>(fzf-complete-word)
-imap <C-x><C-f> <plug>(fzf-complete-path)
-imap <C-x><C-l> <plug>(fzf-complete-line)
+vim.keymap.set('i', '<C-x><C-k>', '<plug>(fzf-complete-word)', { remap = true })
+vim.keymap.set('i', '<C-x><C-f>', '<plug>(fzf-complete-path)', { remap = true })
+vim.keymap.set('i', '<C-x><C-l>', '<plug>(fzf-complete-line)', { remap = true })
+EOF
 
 " lsp mappings
 lua << EOF
