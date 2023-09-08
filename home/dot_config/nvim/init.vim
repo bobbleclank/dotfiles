@@ -377,8 +377,9 @@ vim.keymap.set('i', '<C-x><C-f>', '<plug>(fzf-complete-path)', { remap = true })
 vim.keymap.set('i', '<C-x><C-l>', '<plug>(fzf-complete-line)', { remap = true })
 EOF
 
-" lsp mappings
 lua << EOF
+-- lsp mappings
+
 -- Global mappings
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
