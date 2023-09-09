@@ -290,15 +290,6 @@ vim.o.spell = false
 EOF
 
 "-------------------------------------------------------------------------------
-" Clang format
-"-------------------------------------------------------------------------------
-
-function! ClangFormatOnWrite() abort
-  let l:formatdiff = 1
-  py3file ~/clang-format.py
-endfunction
-
-"-------------------------------------------------------------------------------
 " Key mappings
 "-------------------------------------------------------------------------------
 
@@ -406,6 +397,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
 
+    vim.keymap.set('n', 'F', vim.lsp.buf.format, opts)
+    vim.keymap.set('x', 'F', vim.lsp.buf.format, opts)
+
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = { '*.h', '*.hpp', '*.tpp', '*.c', '*.cc', '*.cpp' },
+      group = 'UserLspConfig',
+      callback = function() vim.lsp.buf.format({ async = false }) end,
+    })
+
     vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
       group = 'UserLspConfig',
       callback = function() vim.lsp.buf.document_highlight() end,
@@ -472,12 +472,4 @@ vim.api.nvim_create_autocmd('VimResized', {
   group = vimrc_augroup,
   command = [[exe "normal! \<C-w>="]],
 })
-
--- Format cpp files on write
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = { '*.h', '*.hpp', '*.tpp', '*.c', '*.cc', '*.cpp' },
-  group = vimrc_augroup,
-  command = 'call ClangFormatOnWrite()',
-})
-
 EOF
