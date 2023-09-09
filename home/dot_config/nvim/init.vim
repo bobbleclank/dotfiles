@@ -426,31 +426,58 @@ EOF
 " Auto commands
 "-------------------------------------------------------------------------------
 
-augroup VimrcAutoCommands
-  autocmd!
+lua << EOF
+local vimrc_augroup = vim.api.nvim_create_augroup('VimrcAutoCommands', { clear = true })
 
-  " tpp files are actually cpp files
-  au BufNewFile,BufRead *.tpp setlocal filetype=cpp
+-- tpp files are actually cpp files
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.tpp',
+  group = vimrc_augroup,
+  command = 'setlocal filetype=cpp',
+})
 
-  " Modify default number of spaces that a <Tab> counts for
-  au FileType cmake,lua,vim setlocal softtabstop=2
-  au FileType cmake,lua,vim setlocal shiftwidth=2
+-- Modify default number of spaces that a <Tab> counts for
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'cmake', 'lua', 'vim' },
+  group = vimrc_augroup,
+  command = 'setlocal softtabstop=2',
+})
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'cmake', 'lua', 'vim' },
+  group = vimrc_augroup,
+  command = 'setlocal shiftwidth=2',
+})
 
-  " Enable spell checking for Git commit and Markdown files
-  au FileType gitcommit,markdown setlocal spell
+-- Enable spell checking for Git commit and Markdown files
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'gitcommit', 'markdown' },
+  group = vimrc_augroup,
+  command = 'setlocal spell',
+})
 
-  " Always start editing a file in case a swap file exists
-  au SwapExists * let v:swapchoice = 'e'
+-- Always start editing a file in case a swap file exists
+vim.api.nvim_create_autocmd('SwapExists', {
+  group = vimrc_augroup,
+  command = [[let v:swapchoice = 'e']],
+})
 
-  " Return to last edit position when opening files
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-               \ |   exe "normal! g`\""
-               \ | endif
+-- Return to last edit position when opening files
+vim.api.nvim_create_autocmd('BufReadPost', {
+  group = vimrc_augroup,
+  command = [[if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]],
+})
 
-  " Resize splits when the window is resized
-  au VimResized * exe "normal! \<C-w>="
+-- Resize splits when the window is resized
+vim.api.nvim_create_autocmd('VimResized', {
+  group = vimrc_augroup,
+  command = [[exe "normal! \<C-w>="]],
+})
 
-  " Format cpp files on write
-  au BufWritePre *.h,*.hpp,*.tpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
+-- Format cpp files on write
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = { '*.h', '*.hpp', '*.tpp', '*.c', '*.cc', '*.cpp' },
+  group = vimrc_augroup,
+  command = 'call ClangFormatOnWrite()',
+})
 
-augroup END
+EOF
