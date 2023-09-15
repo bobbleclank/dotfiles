@@ -324,7 +324,6 @@ nnoremap <F5> :set spell! spell?<CR>
 nnoremap <F6> :set list! list?<CR>
 nnoremap <F7> :ToggleWhitespace<CR>
 nnoremap <F8> :nohlsearch<CR>
-
 nnoremap <F9> :set wrap! wrap?<CR>
 nnoremap <F10> :set paste! paste?<CR>
 
