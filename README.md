@@ -9,5 +9,5 @@ ln -s ~/dotfiles/home/dot_tmux.conf .tmux.conf
 ln -s ~/dotfiles/home/dot_vimrc .vimrc
 
 mkdir -p .config/nvim
-ln -s ~/dotfiles/home/dot_config/nvim/init.vim .config/nvim/init.vim
+ln -s ~/dotfiles/home/dot_config/nvim/init.lua .config/nvim/init.lua
 ```
