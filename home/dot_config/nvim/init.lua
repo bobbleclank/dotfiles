@@ -1,8 +1,5 @@
-lua << EOF
 -- Plugin manager
-EOF
 
-lua << EOF
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -193,13 +190,9 @@ require('lazy').setup({
   -- Icons
   { 'nvim-tree/nvim-web-devicons' },
 })
-EOF
 
-lua << EOF
 -- Text formatting
-EOF
 
-lua << EOF
 vim.o.tabstop = 8
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
@@ -211,22 +204,14 @@ vim.o.autoindent = true
 vim.o.smartindent = false
 vim.o.cindent = true
 vim.opt.cinoptions = { ':0', 'l1', 'g0' }
-EOF
 
-lua << EOF
 -- Color scheme
-EOF
 
-lua << EOF
 vim.o.background = 'dark'
 vim.o.termguicolors = true
-EOF
 
-lua << EOF
 -- UI settings
-EOF
 
-lua << EOF
 vim.o.cursorline = false
 vim.o.foldenable = false
 vim.o.showmode = false
@@ -240,13 +225,9 @@ vim.o.modeline = true
 vim.o.cmdheight = 2
 vim.o.showtabline = 2
 vim.o.laststatus = 3
-EOF
 
-lua << EOF
 -- Visual cues
-EOF
 
-lua << EOF
 vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.ignorecase = true
@@ -261,13 +242,9 @@ vim.o.breakindent = true
 vim.o.showmatch = true
 vim.o.matchtime = 3
 vim.o.scrolloff = 3
-EOF
 
-lua << EOF
 -- Behavioural settings
-EOF
 
-lua << EOF
 vim.o.autoread = true
 vim.o.hidden = true
 vim.o.ttimeoutlen = 0
@@ -287,13 +264,9 @@ vim.o.backup = false
 vim.o.writebackup = false
 vim.o.spelllang = 'en'
 vim.o.spell = false
-EOF
 
-lua << EOF
 -- Key mappings
-EOF
 
-lua << EOF
 vim.keymap.set('n', '<F5>', ':set spell! spell?<CR>')
 vim.keymap.set('n', '<F6>', ':set list! list?<CR>')
 vim.keymap.set('n', '<F7>', ':ToggleWhitespace<CR>')
@@ -317,9 +290,7 @@ vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { silent = true })
 vim.keymap.set('n', '<C-l>', ':bnext<CR>', { silent = true })
 
 vim.keymap.set('n', '<C-t>', ':tab split<CR>', { silent = true })
-EOF
 
-lua << EOF
 -- fugitive mappings
 vim.keymap.set('n', '<leader>gg', ':Git<CR>', { silent = true })
 vim.keymap.set('n', '<leader>gl', ':Git log<CR>', { silent = true })
@@ -336,9 +307,7 @@ vim.keymap.set('n', '<leader>gt', ':Git rebase --continue<CR>', { silent = true 
 vim.keymap.set('n', '<leader>gf', ':Gdiffsplit<CR>', { silent = true })
 vim.keymap.set('n', '<leader>gv', ':Gvdiffsplit<CR>', { silent = true })
 vim.keymap.set('n', '<leader>gh', ':Ghdiffsplit<CR>', { silent = true })
-EOF
 
-lua << EOF
 -- fzf mappings
 vim.keymap.set('n', '<C-p>', ':Files<CR>', { silent = true })
 vim.keymap.set('n', '<leader>f', ':GFiles<CR>', { silent = true })
@@ -366,9 +335,7 @@ vim.keymap.set('o', '<leader><tab>', '<plug>(fzf-maps-o)', { remap = true })
 vim.keymap.set('i', '<C-x><C-k>', '<plug>(fzf-complete-word)', { remap = true })
 vim.keymap.set('i', '<C-x><C-f>', '<plug>(fzf-complete-path)', { remap = true })
 vim.keymap.set('i', '<C-x><C-l>', '<plug>(fzf-complete-line)', { remap = true })
-EOF
 
-lua << EOF
 -- lsp mappings
 
 -- Global mappings
@@ -416,17 +383,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     })
   end,
 })
-EOF
 
-lua << EOF
 vim.keymap.set('n', '<leader>ia', ':<C-u>ClangdSwitchSourceHeader<CR>', { silent = true })
-EOF
 
-lua << EOF
 -- Auto commands
-EOF
 
-lua << EOF
 local vimrc_augroup = vim.api.nvim_create_augroup('VimrcAutoCommands', { clear = true })
 
 -- tpp files are actually cpp files
@@ -472,4 +433,3 @@ vim.api.nvim_create_autocmd('VimResized', {
   group = vimrc_augroup,
   command = [[exe "normal! \<C-w>="]],
 })
-EOF
