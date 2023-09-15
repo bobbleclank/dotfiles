@@ -1,6 +1,6 @@
-"-------------------------------------------------------------------------------
-" Plugin manager
-"-------------------------------------------------------------------------------
+lua << EOF
+-- Plugin manager
+EOF
 
 lua << EOF
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -195,9 +195,9 @@ require('lazy').setup({
 })
 EOF
 
-"-------------------------------------------------------------------------------
-" Text formatting
-"-------------------------------------------------------------------------------
+lua << EOF
+-- Text formatting
+EOF
 
 lua << EOF
 vim.o.tabstop = 8
@@ -213,18 +213,18 @@ vim.o.cindent = true
 vim.opt.cinoptions = { ':0', 'l1', 'g0' }
 EOF
 
-"-------------------------------------------------------------------------------
-" Color scheme
-"-------------------------------------------------------------------------------
+lua << EOF
+-- Color scheme
+EOF
 
 lua << EOF
 vim.o.background = 'dark'
 vim.o.termguicolors = true
 EOF
 
-"-------------------------------------------------------------------------------
-" UI settings
-"-------------------------------------------------------------------------------
+lua << EOF
+-- UI settings
+EOF
 
 lua << EOF
 vim.o.cursorline = false
@@ -242,9 +242,9 @@ vim.o.showtabline = 2
 vim.o.laststatus = 3
 EOF
 
-"-------------------------------------------------------------------------------
-" Visual cues
-"-------------------------------------------------------------------------------
+lua << EOF
+-- Visual cues
+EOF
 
 lua << EOF
 vim.o.hlsearch = true
@@ -263,9 +263,9 @@ vim.o.matchtime = 3
 vim.o.scrolloff = 3
 EOF
 
-"-------------------------------------------------------------------------------
-" Behavioural settings
-"-------------------------------------------------------------------------------
+lua << EOF
+-- Behavioural settings
+EOF
 
 lua << EOF
 vim.o.autoread = true
@@ -289,9 +289,9 @@ vim.o.spelllang = 'en'
 vim.o.spell = false
 EOF
 
-"-------------------------------------------------------------------------------
-" Key mappings
-"-------------------------------------------------------------------------------
+lua << EOF
+-- Key mappings
+EOF
 
 lua << EOF
 vim.keymap.set('n', '<F5>', ':set spell! spell?<CR>')
@@ -422,9 +422,9 @@ lua << EOF
 vim.keymap.set('n', '<leader>ia', ':<C-u>ClangdSwitchSourceHeader<CR>', { silent = true })
 EOF
 
-"-------------------------------------------------------------------------------
-" Auto commands
-"-------------------------------------------------------------------------------
+lua << EOF
+-- Auto commands
+EOF
 
 lua << EOF
 local vimrc_augroup = vim.api.nvim_create_augroup('VimrcAutoCommands', { clear = true })
