@@ -326,7 +326,6 @@ nnoremap <F7> :ToggleWhitespace<CR>
 nnoremap <F8> :nohlsearch<CR>
 
 nnoremap <F9> :set paste! paste?<CR>
-set pastetoggle=<F9>
 
 inoremap jk <ESC>
 
