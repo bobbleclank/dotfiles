@@ -409,7 +409,7 @@ nmap <silent> gr <plug>(coc-references)
 
 nmap <silent> K :call CocActionAsync('doHover')<CR>
 
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>r <Plug>(coc-rename)
 
 nmap <leader>a <plug>(coc-codeaction-cursor)
 
@@ -422,7 +422,7 @@ omap ic <plug>(coc-classobj-i)
 xmap ac <plug>(coc-classobj-a)
 omap ac <plug>(coc-classobj-a)
 
-nnoremap <silent> <leader>ia :<C-u>CocCommand clangd.switchSourceHeader<CR>
+nnoremap <silent> <leader>i :<C-u>CocCommand clangd.switchSourceHeader<CR>
 
 "-------------------------------------------------------------------------------
 " Auto commands
