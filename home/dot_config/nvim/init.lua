@@ -316,7 +316,7 @@ vim.keymap.set('n', '<leader>gh', ':Ghdiffsplit<CR>', { silent = true })
 -- fzf mappings
 vim.keymap.set('n', '<C-p>', ':Files<CR>', { silent = true })
 vim.keymap.set('n', '<leader>f', ':GFiles<CR>', { silent = true })
-vim.keymap.set('n', '<leader>g', ':GFiles?<CR>', { silent = true })
+vim.keymap.set('n', '<leader>d', ':GFiles?<CR>', { silent = true })
 vim.keymap.set('n', '<leader>b', ':Buffers<CR>', { silent = true })
 vim.keymap.set('n', '<leader>h', ':History<CR>', { silent = true })
 

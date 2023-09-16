@@ -370,7 +370,7 @@ nnoremap <silent> <leader>gh :Ghdiffsplit<CR>
 " fzf mappings
 nnoremap <silent> <C-p>     :Files<CR>
 nnoremap <silent> <leader>f :GFiles<CR>
-nnoremap <silent> <leader>g :GFiles?<CR>
+nnoremap <silent> <leader>d :GFiles?<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>h :History<CR>
 
