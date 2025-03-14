@@ -222,7 +222,7 @@ vim.o.signcolumn = 'yes'
 vim.opt.colorcolumn = { 81, 82 }
 vim.o.showcmd = true
 vim.o.modeline = true
-vim.o.cmdheight = 2
+vim.o.cmdheight = 0
 vim.o.showtabline = 2
 vim.o.laststatus = 3
 
