@@ -46,7 +46,7 @@ require('lazy').setup({
         with_git_branch = true,
         with_git_status = true,
         with_diagnostic_status = true,
-        with_session_status = false,
+        with_session_status = true,
         with_attached_clients = true,
         with_lsp_status = true,
         with_macro_status = true,
