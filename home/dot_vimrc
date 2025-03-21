@@ -333,6 +333,8 @@ nnoremap <silent> <C-l> :bnext<CR>
 
 nnoremap <silent> <C-t> :tab split<CR>
 
+noremap <silent> F :py3file ~/clang-format.py<CR>
+
 " fugitive mappings
 nnoremap <silent> <leader>gg :Git<CR>
 nnoremap <silent> <leader>gl :Git log<CR>
