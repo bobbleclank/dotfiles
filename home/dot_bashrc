@@ -73,4 +73,5 @@ if [[ -f ~/.git-prompt.sh ]]; then
   source ~/.git-prompt.sh
 fi
 
+# Command-line fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
