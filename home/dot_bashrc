@@ -51,6 +51,9 @@ export EDITOR=vim
 # History settings
 HISTSIZE=99999
 
+# Path
+PATH=/usr/local/opt/llvm/bin:$PATH
+
 # Bash completion support for core Git
 if [[ -f ~/.git-completion.bash ]]; then
   source ~/.git-completion.bash
