@@ -196,14 +196,14 @@ let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#overflow_marker = '…'
 
+function! TabTitleFormatter(n) abort
+  return ' '
+endfunction
+
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#fnamecollapse = 1
 let g:airline#extensions#tabline#tabtitle_formatter = 'TabTitleFormatter'
-
-function! TabTitleFormatter(n) abort
-  return ' '
-endfunction
 
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -300,15 +300,6 @@ let &undodir = s:data_dir . '/undo'
 let &dir = s:data_dir . '/swap'
 let &backupdir = s:data_dir . '/backup'
 let &spellfile = s:data_dir . '/spell/wordlist.utf-8.add'
-
-"-------------------------------------------------------------------------------
-" Clang format
-"-------------------------------------------------------------------------------
-
-function! ClangFormatOnWrite() abort
-  let l:formatdiff = 1
-  py3file ~/clang-format.py
-endfunction
 
 "-------------------------------------------------------------------------------
 " Key mappings
@@ -423,6 +414,11 @@ nnoremap <silent> <leader>i :<C-u>CocCommand clangd.switchSourceHeader<CR>
 "-------------------------------------------------------------------------------
 " Auto commands
 "-------------------------------------------------------------------------------
+
+function! ClangFormatOnWrite() abort
+  let l:formatdiff = 1
+  py3file ~/clang-format.py
+endfunction
 
 augroup VimrcAutoCommands
   autocmd!
