@@ -120,13 +120,9 @@ augroup DefaultThemeAutoCommands
   au ColorScheme default call DefaultThemeHighlighting()
 augroup END
 
-colorscheme default
-
 let g:moonflyItalics = v:true
 let g:moonflyTransparent = v:true
 let g:moonflyUndercurls = v:true
-
-colorscheme moonfly
 
 let g:nightflyItalics = v:true
 let g:nightflyTransparent = v:true
