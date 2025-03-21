@@ -167,7 +167,6 @@ require('lazy').setup({
           transparent = true,
           styles = {
             comments = "italic",
-            keywords = "NONE",
           },
         },
       })
