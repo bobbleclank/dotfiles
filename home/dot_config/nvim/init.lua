@@ -170,7 +170,6 @@ require('lazy').setup({
           },
         },
       })
-      vim.cmd([[colorscheme carbonfox]])
     end,
   },
 
@@ -196,6 +195,8 @@ vim.opt.cinoptions = { ':0', 'l1', 'g0' }
 
 vim.o.background = 'dark'
 vim.o.termguicolors = true
+
+vim.cmd [[colorscheme carbonfox]]
 
 -- UI settings
 
