@@ -269,10 +269,10 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
--- Map Y to copy to the end of the line
+-- Copy to the end of the line
 vim.keymap.set('', 'Y', 'y$', { remap = true })
 
--- Remap Q to do nothing instead of entering Ex mode
+-- Do nothing instead of entering Ex mode
 vim.keymap.set('n', 'Q', '<nop>')
 
 vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { silent = true })
