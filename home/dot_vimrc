@@ -201,7 +201,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#fnamecollapse = 1
 let g:airline#extensions#tabline#tabtitle_formatter = 'TabTitleFormatter'
 
-function TabTitleFormatter(n) abort
+function! TabTitleFormatter(n) abort
   return ' '
 endfunction
 
