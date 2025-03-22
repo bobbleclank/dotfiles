@@ -270,7 +270,7 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
 -- Copy to the end of the line
-vim.keymap.set('', 'Y', 'y$', { remap = true })
+vim.keymap.set('n', 'Y', 'y$', { remap = true })
 
 -- Do nothing instead of entering Ex mode
 vim.keymap.set('n', 'Q', '<nop>')
