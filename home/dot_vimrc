@@ -322,7 +322,7 @@ nnoremap k gk
 vnoremap < <gv
 vnoremap > >gv
 
-" Copy to the end of the line
+" Yank to the end of the line
 nnoremap Y y$
 
 " Do nothing instead of entering Ex mode
