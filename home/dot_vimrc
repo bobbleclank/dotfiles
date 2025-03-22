@@ -323,7 +323,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Copy to the end of the line
-nmap Y y$
+nnoremap Y y$
 
 " Do nothing instead of entering Ex mode
 nnoremap Q <nop>
