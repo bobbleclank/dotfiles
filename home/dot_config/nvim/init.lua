@@ -269,9 +269,6 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
--- Copy to the end of the line
-vim.keymap.set('n', 'Y', 'y$')
-
 -- Do nothing instead of entering Ex mode
 vim.keymap.set('n', 'Q', '<nop>')
 
