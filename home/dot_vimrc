@@ -122,11 +122,11 @@ augroup END
 
 let g:moonflyItalics = v:true
 let g:moonflyTransparent = v:true
-let g:moonflyUndercurls = v:true
+let g:moonflyUndercurls = v:false
 
 let g:nightflyItalics = v:true
 let g:nightflyTransparent = v:true
-let g:nightflyUndercurls = v:true
+let g:nightflyUndercurls = v:false
 
 colorscheme nightfly
 

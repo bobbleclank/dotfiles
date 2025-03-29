@@ -143,7 +143,7 @@ require('lazy').setup({
     init = function()
       vim.g.moonflyItalics = true
       vim.g.moonflyTransparent = true
-      vim.g.moonflyUndercurls = true
+      vim.g.moonflyUndercurls = false
     end,
   },
   {
@@ -154,7 +154,7 @@ require('lazy').setup({
     init = function()
       vim.g.nightflyItalics = true
       vim.g.nightflyTransparent = true
-      vim.g.nightflyUndercurls = true
+      vim.g.nightflyUndercurls = false
     end,
   },
   {
