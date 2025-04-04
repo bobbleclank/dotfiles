@@ -27,6 +27,15 @@ require('lazy').setup({
     end,
   },
 
+  -- Format code
+  {
+    'sbdchd/neoformat',
+    init = function()
+      vim.g.neoformat_enabled_cpp = { 'clangformat' }
+      vim.g.neoformat_only_msg_on_error = true
+    end,
+  },
+
   -- Status and tabline
   {
     'bluz71/nvim-linefly',
