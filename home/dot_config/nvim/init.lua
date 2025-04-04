@@ -304,6 +304,8 @@ vim.keymap.set('n', '<C-l>', ':bnext<CR>', { silent = true })
 
 vim.keymap.set('n', '<C-t>', ':tab split<CR>', { silent = true })
 
+vim.keymap.set({ 'n', 'x' }, 'F', ':Neoformat<CR>')
+
 -- fugitive mappings
 vim.keymap.set('n', '<leader>gg', ':Git<CR>', { silent = true })
 vim.keymap.set('n', '<leader>gl', ':Git log<CR>', { silent = true })
@@ -380,13 +382,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
     vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action, opts)
-    vim.keymap.set({ 'n', 'x' }, 'F', vim.lsp.buf.format, opts)
-
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      pattern = { '*.h', '*.hpp', '*.tpp', '*.c', '*.cc', '*.cpp' },
-      group = 'UserLspConfig',
-      callback = function() vim.lsp.buf.format({ async = false }) end,
-    })
 
     vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
       group = 'UserLspConfig',
@@ -447,4 +442,11 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 vim.api.nvim_create_autocmd('VimResized', {
   group = vimrc_augroup,
   command = [[exe "normal! \<C-w>="]],
+})
+
+-- Format cpp files on write
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = { '*.h', '*.hpp', '*.tpp', '*.c', '*.cc', '*.cpp' },
+  group = vimrc_augroup,
+  command = 'Neoformat',
 })
