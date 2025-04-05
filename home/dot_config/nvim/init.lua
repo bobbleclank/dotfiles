@@ -284,7 +284,6 @@ vim.o.spell = false
 
 vim.keymap.set('n', '<F5>', ':set spell! spell?<CR>')
 vim.keymap.set('n', '<F6>', ':set list! list?<CR>')
-vim.keymap.set('n', '<F7>', ':ToggleWhitespace<CR>')
 vim.keymap.set('n', '<F8>', ':nohlsearch<CR>')
 vim.keymap.set('n', '<F9>', ':set wrap! wrap?<CR>')
 
