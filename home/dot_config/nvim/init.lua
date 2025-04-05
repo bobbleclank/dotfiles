@@ -282,9 +282,9 @@ vim.o.spell = false
 
 -- Key mappings
 
-vim.keymap.set('n', '<F5>', ':set spell! spell?<CR>')
-vim.keymap.set('n', '<F6>', ':set list! list?<CR>')
-vim.keymap.set('n', '<F7>', ':set wrap! wrap?<CR>')
+vim.keymap.set('n', '<F5>', ':set spell! spell?<CR>', { silent = true })
+vim.keymap.set('n', '<F6>', ':set list! list?<CR>', { silent = true })
+vim.keymap.set('n', '<F7>', ':set wrap! wrap?<CR>', { silent = true })
 vim.keymap.set('n', '<F8>', ':nohlsearch<CR>')
 
 vim.keymap.set('i', 'jk', '<ESC>')
