@@ -1,4 +1,4 @@
-*dotfiles* Dot files
+*dotfiles* Dot files for Bash, Git, Neovim, tmux and Vim
 
 >
   cd ~

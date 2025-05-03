@@ -1,4 +1,6 @@
-# dot files
+# Dot Files
+
+Dot files for Bash, Git, Neovim, tmux and Vim.
 
 ```
 cd ~
