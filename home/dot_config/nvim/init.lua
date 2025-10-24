@@ -223,7 +223,7 @@ vim.opt.cinoptions = { ':0', 'l1', 'g0' }
 vim.o.background = 'dark'
 vim.o.termguicolors = true
 
-vim.cmd [[colorscheme tokyodark]]
+vim.cmd [[colorscheme nightfly]]
 
 -- UI settings
 
