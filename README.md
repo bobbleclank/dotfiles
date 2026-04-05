@@ -12,4 +12,6 @@ ln -s ~/dotfiles/home/dot_vimrc .vimrc
 
 mkdir -p .config/nvim
 ln -s ~/dotfiles/home/dot_config/nvim/init.lua .config/nvim/init.lua
+
+ln -s /usr/local/Cellar/clang-format/<version>/share/clang/clang-format.py
 ```
