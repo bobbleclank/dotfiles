@@ -7,6 +7,7 @@
 - No premature abstractions — don't design for hypothetical future requirements.
 - Simple, consistent rules are preferred over case-by-case judgement calls.
 - Prefer return by value over out parameters.
+- No reads from an object after `std::move` — extract any values needed afterwards into locals beforehand. Avoids reasoning about which callee branch actually performs the move.
 
 ## Naming
 - Don't use refactoring as a way to avoid difficult naming decisions.
