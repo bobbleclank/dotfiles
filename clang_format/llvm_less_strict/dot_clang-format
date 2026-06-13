@@ -3,6 +3,6 @@ PointerAlignment: Left
 
 AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: InlineOnly
-AlwaysBreakTemplateDeclarations: Yes
+BreakTemplateDeclarations: Yes
 PackConstructorInitializers: Never
 BreakBeforeBraces: Stroustrup

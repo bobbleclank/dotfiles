@@ -63,7 +63,7 @@ The following non-default options, relative to `LLVM`, are used.
 
     AllowShortEnumsOnASingleLine: false
     AllowShortFunctionsOnASingleLine: Inline
-    AlwaysBreakTemplateDeclarations: Yes
+    BreakTemplateDeclarations: Yes
     PackConstructorInitializers: NextLine
 
 ### Allow short enumerations on a single line
@@ -94,7 +94,7 @@ The following non-default options, relative to `LLVM`, are used.
 | Mozilla   |       | Inline |       |
 | WebKit    | All   |        |       |
 
-### Always break template declarations
+### Break template declarations
 
 `Yes` is used by Google, Chromium, and Mozilla.
 
