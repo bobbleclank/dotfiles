@@ -36,3 +36,6 @@
 - Flag missing guards, and callback ordering issues.
 - Note behavioral changes even if arguably better.
 - When asked to review a specific commit, user will rebase to that commit first.
+
+## Session continuity
+- Cross-session carryover lives in project memory, not the in-session task list (which doesn't persist). Tag such items `PENDING:` at the front of their MEMORY.md index line, and scan for those at session start before reporting no pending tasks.
