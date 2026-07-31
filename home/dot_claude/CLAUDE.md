@@ -1,4 +1,4 @@
-# Coding preferences
+# Working preferences
 
 ## General style
 - No comments by default. Only add one when the WHY is non-obvious.
