@@ -16,5 +16,5 @@ ln -s ~/dotfiles/home/dot_config/nvim/init.lua .config/nvim/init.lua
 mkdir .claude
 ln -s ~/dotfiles/home/dot_claude/CLAUDE.md .claude/CLAUDE.md
 
-ln -s /usr/local/Cellar/clang-format/<version>/share/clang/clang-format.py
+ln -s /usr/local/opt/clang-format/share/clang/clang-format.py
 ```
