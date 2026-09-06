@@ -1,6 +1,6 @@
 # Dot Files
 
-Dot files for Bash, Git, Neovim, tmux and Vim.
+Dot files for Bash, Clang-Format, Claude, Git, Neovim, tmux and Vim.
 
 ```
 cd ~
