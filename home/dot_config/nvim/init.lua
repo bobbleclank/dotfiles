@@ -125,6 +125,9 @@ require('lazy').setup({
   {
     'nvim-treesitter/nvim-treesitter',
     branch = 'master',
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
+    },
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup({
@@ -145,6 +148,18 @@ require('lazy').setup({
           enable = true,
           disable = {},
           additional_vim_regex_highlighting = false,
+        },
+        textobjects = {
+          select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+              ['if'] = '@function.inner',
+              ['af'] = '@function.outer',
+              ['ic'] = '@class.inner',
+              ['ac'] = '@class.outer',
+            },
+          },
         },
       })
     end,
