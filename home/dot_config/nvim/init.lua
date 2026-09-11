@@ -124,6 +124,7 @@ require('lazy').setup({
   -- Treesitter configurations and abstraction layer
   {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup({
