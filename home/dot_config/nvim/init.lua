@@ -127,7 +127,16 @@ require('lazy').setup({
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup({
-        ensure_installed = { "cpp" },
+        ensure_installed = {
+          "bash",
+          "cmake",
+          "cpp",
+          "lua",
+          "markdown",
+          "markdown_inline",
+          "vim",
+          "vimdoc",
+        },
         sync_install = false,
         auto_install = false,
         ignore_install = {},
