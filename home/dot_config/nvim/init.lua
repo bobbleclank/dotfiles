@@ -104,10 +104,7 @@ require('lazy').setup({
   { 'tpope/vim-fugitive' },
 
   -- General-purpose command-line fuzzy finder
-  {
-    'junegunn/fzf',
-    build = './install --all',
-  },
+  { 'junegunn/fzf' },
   {
     'junegunn/fzf.vim',
     init = function()
