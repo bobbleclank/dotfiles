@@ -195,9 +195,6 @@ require('lazy').setup({
         variables = {},
       },
     },
-    config = function(_, opts)
-      require('tokyodark').setup(opts)
-    end,
   },
 
   -- Icons
