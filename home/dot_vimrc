@@ -366,8 +366,8 @@ nnoremap <silent> <leader>l :Lines<CR>
 nnoremap <silent> <leader>L :BLines<CR>
 
 nnoremap <silent> <leader>c :Commits<CR>
-nnoremap <silent> <leader>x :BCommits<CR>
-xnoremap <silent> <leader>x :BCommits<CR>
+nnoremap <silent> <leader>C :BCommits<CR>
+xnoremap <silent> <leader>C :BCommits<CR>
 
 nnoremap <silent> <leader>m :Commands<CR>
 nnoremap <silent> <leader>t :Helptags<CR>
