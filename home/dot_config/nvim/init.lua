@@ -104,14 +104,6 @@ require('lazy').setup({
   { 'tpope/vim-fugitive' },
 
   -- General-purpose command-line fuzzy finder
-  { 'junegunn/fzf' },
-  {
-    'junegunn/fzf.vim',
-    init = function()
-      vim.g['fzf_layout'] = { window = { width = 0.9, height = 0.9 } }
-      vim.g['fzf_preview_window'] = { 'up,50%', 'ctrl-/' }
-    end,
-  },
   {
     'ibhagwan/fzf-lua',
     opts = {
