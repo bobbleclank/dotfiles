@@ -305,8 +305,6 @@ vim.o.spell = false
 local fzf_lua = require('fzf-lua')
 
 vim.keymap.set('n', '<F5>', ':set spell!<CR>', { silent = true })
-vim.keymap.set('n', '<F6>', ':set list! list?<CR>', { silent = true })
-vim.keymap.set('n', '<F7>', ':set wrap! wrap?<CR>', { silent = true })
 
 vim.keymap.set('i', 'jk', '<ESC>')
 
