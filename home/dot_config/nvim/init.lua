@@ -310,6 +310,8 @@ vim.o.spell = false
 
 -- Key mappings
 
+local fzf_lua = require('fzf-lua')
+
 vim.keymap.set('n', '<F5>', ':set spell!<CR>', { silent = true })
 vim.keymap.set('n', '<F6>', ':set list! list?<CR>', { silent = true })
 vim.keymap.set('n', '<F7>', ':set wrap! wrap?<CR>', { silent = true })
@@ -355,9 +357,9 @@ vim.keymap.set('n', '<leader>gv', ':Gvdiffsplit<CR>', { silent = true })
 vim.keymap.set('n', '<leader>gh', ':Ghdiffsplit<CR>', { silent = true })
 
 -- fzf mappings
-vim.keymap.set('n', '<C-p>', ':Files<CR>', { silent = true })
-vim.keymap.set('n', '<leader>f', ':GFiles<CR>', { silent = true })
-vim.keymap.set('n', '<leader>d', ':GFiles?<CR>', { silent = true })
+vim.keymap.set('n', '<C-p>', fzf_lua.files)
+vim.keymap.set('n', '<leader>f', fzf_lua.git_files)
+vim.keymap.set('n', '<leader>d', fzf_lua.git_status)
 
 vim.keymap.set('n', '<leader>b', ':Buffers<CR>', { silent = true })
 vim.keymap.set('n', '<leader>h', ':History<CR>', { silent = true })
@@ -384,8 +386,6 @@ vim.keymap.set('i', '<C-x><C-f>', '<plug>(fzf-complete-path)', { remap = true })
 vim.keymap.set('i', '<C-x><C-l>', '<plug>(fzf-complete-line)', { remap = true })
 
 -- lsp mappings
-
-local fzf_lua = require('fzf-lua')
 
 -- Global mappings
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
