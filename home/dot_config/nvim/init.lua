@@ -364,9 +364,9 @@ vim.keymap.set('n', '<leader>d', fzf_lua.git_status)
 vim.keymap.set('n', '<leader>b', fzf_lua.buffers)
 vim.keymap.set('n', '<leader>h', fzf_lua.history)
 
-vim.keymap.set('n', '<leader>s', ':Rg<space>')
-vim.keymap.set('n', '<leader>w', ':Rg <C-r><C-w><CR>', { silent = true })
-vim.keymap.set('x', '<leader>v', 'y:Rg <C-r>"<CR>', { silent = true })
+vim.keymap.set('n', '<leader>s', fzf_lua.live_grep)
+vim.keymap.set('n', '<leader>w', fzf_lua.grep_cword)
+vim.keymap.set('x', '<leader>v', fzf_lua.grep_visual)
 
 vim.keymap.set('n', '<leader>l', fzf_lua.lines)
 vim.keymap.set('n', '<leader>k', fzf_lua.blines)
