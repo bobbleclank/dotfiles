@@ -368,8 +368,8 @@ vim.keymap.set('n', '<leader>s', ':Rg<space>')
 vim.keymap.set('n', '<leader>w', ':Rg <C-r><C-w><CR>', { silent = true })
 vim.keymap.set('x', '<leader>v', 'y:Rg <C-r>"<CR>', { silent = true })
 
-vim.keymap.set('n', '<leader>l', ':Lines<CR>', { silent = true })
-vim.keymap.set('n', '<leader>k', ':BLines<CR>', { silent = true })
+vim.keymap.set('n', '<leader>l', fzf_lua.lines)
+vim.keymap.set('n', '<leader>k', fzf_lua.blines)
 
 vim.keymap.set('n', '<leader>c', ':Commits<CR>', { silent = true })
 vim.keymap.set('n', '<leader>x', ':BCommits<CR>', { silent = true })
