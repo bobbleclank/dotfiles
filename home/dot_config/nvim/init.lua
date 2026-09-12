@@ -389,6 +389,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action, opts)
 
+    vim.keymap.set('n', '<leader>i', vim.cmd.ClangdSwitchSourceHeader, opts)
+
     vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
       group = 'UserLspConfig',
       callback = function() vim.lsp.buf.document_highlight() end,
@@ -399,8 +401,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     })
   end,
 })
-
-vim.keymap.set('n', '<leader>i', ':<C-u>ClangdSwitchSourceHeader<CR>', { silent = true })
 
 -- Auto commands
 
