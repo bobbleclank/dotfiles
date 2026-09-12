@@ -377,9 +377,7 @@ vim.keymap.set('n', '<leader>x', fzf_lua.git_bcommits)
 vim.keymap.set('n', '<leader>m', fzf_lua.commands)
 vim.keymap.set('n', '<leader>t', fzf_lua.helptags)
 
-vim.keymap.set('n', '<leader><tab>', '<plug>(fzf-maps-n)', { remap = true })
-vim.keymap.set('x', '<leader><tab>', '<plug>(fzf-maps-x)', { remap = true })
-vim.keymap.set('o', '<leader><tab>', '<plug>(fzf-maps-o)', { remap = true })
+vim.keymap.set('n', '<leader><tab>', fzf_lua.keymaps)
 
 vim.keymap.set('i', '<C-x><C-k>', '<plug>(fzf-complete-word)', { remap = true })
 vim.keymap.set('i', '<C-x><C-f>', '<plug>(fzf-complete-path)', { remap = true })
