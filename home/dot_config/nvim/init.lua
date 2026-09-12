@@ -316,8 +316,6 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
-vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { silent = true })
-
 vim.keymap.set({ 'n', 'x' }, 'F', ':Neoformat<CR>')
 
 -- fugitive mappings

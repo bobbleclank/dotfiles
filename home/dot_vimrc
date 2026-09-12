@@ -327,8 +327,6 @@ nnoremap Y y$
 " Do nothing instead of entering Ex mode
 nnoremap Q <nop>
 
-nnoremap <silent> <C-h> :bprevious<CR>
-
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 noremap <silent> F :py3file ~/clang-format.py<CR>
