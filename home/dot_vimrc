@@ -369,7 +369,6 @@ nnoremap <silent> <leader>c :Commits<CR>
 nnoremap <silent> <leader>C :BCommits<CR>
 xnoremap <silent> <leader>C :BCommits<CR>
 
-nnoremap <silent> <leader>m :Commands<CR>
 nnoremap <silent> <leader>t :Helptags<CR>
 
 nmap <leader><tab> <plug>(fzf-maps-n)
