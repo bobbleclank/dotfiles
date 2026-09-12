@@ -316,8 +316,8 @@ inoremap jk <ESC>
 nnoremap j gj
 nnoremap k gk
 
-vnoremap < <gv
-vnoremap > >gv
+xnoremap < <gv
+xnoremap > >gv
 
 " Yank to the end of the line
 nnoremap Y y$
