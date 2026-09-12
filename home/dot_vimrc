@@ -331,8 +331,6 @@ nnoremap Q <nop>
 nnoremap <silent> <C-h> :bprevious<CR>
 nnoremap <silent> <C-l> :bnext<CR>
 
-nnoremap <silent> <C-t> :tab split<CR>
-
 noremap <silent> F :py3file ~/clang-format.py<CR>
 
 " fugitive mappings
