@@ -348,7 +348,7 @@ vim.keymap.set('n', '<leader>h', fzf_lua.history)
 
 vim.keymap.set('n', '<leader>s', fzf_lua.live_grep)
 vim.keymap.set('n', '<leader>w', fzf_lua.grep_cword)
-vim.keymap.set('x', '<leader>v', fzf_lua.grep_visual)
+vim.keymap.set('x', '<leader>w', fzf_lua.grep_visual)
 
 vim.keymap.set('n', '<leader>l', fzf_lua.lines)
 vim.keymap.set('n', '<leader>k', fzf_lua.blines)

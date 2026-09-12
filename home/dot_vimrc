@@ -360,7 +360,7 @@ nnoremap <silent> <leader>h :History<CR>
 
 nnoremap          <leader>s :Rg<space>
 nnoremap <silent> <leader>w :Rg <C-r><C-w><CR>
-xnoremap <silent> <leader>v y:Rg <C-r>"<CR>
+xnoremap <silent> <leader>w y:Rg <C-r>"<CR>
 
 nnoremap <silent> <leader>l :Lines<CR>
 nnoremap <silent> <leader>k :BLines<CR>
