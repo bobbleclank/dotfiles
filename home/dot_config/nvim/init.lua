@@ -361,8 +361,8 @@ vim.keymap.set('n', '<C-p>', fzf_lua.files)
 vim.keymap.set('n', '<leader>f', fzf_lua.git_files)
 vim.keymap.set('n', '<leader>d', fzf_lua.git_status)
 
-vim.keymap.set('n', '<leader>b', ':Buffers<CR>', { silent = true })
-vim.keymap.set('n', '<leader>h', ':History<CR>', { silent = true })
+vim.keymap.set('n', '<leader>b', fzf_lua.buffers)
+vim.keymap.set('n', '<leader>h', fzf_lua.history)
 
 vim.keymap.set('n', '<leader>s', ':Rg<space>')
 vim.keymap.set('n', '<leader>w', ':Rg <C-r><C-w><CR>', { silent = true })
