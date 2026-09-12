@@ -320,8 +320,6 @@ vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { silent = true })
 vim.keymap.set('n', '<C-l>', ':bnext<CR>', { silent = true })
 
-vim.keymap.set('n', '<C-t>', ':tab split<CR>', { silent = true })
-
 vim.keymap.set({ 'n', 'x' }, 'F', ':Neoformat<CR>')
 
 -- fugitive mappings
