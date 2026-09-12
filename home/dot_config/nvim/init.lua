@@ -120,7 +120,7 @@ require('lazy').setup({
   {
     'neovim/nvim-lspconfig',
     config = function()
-      require('lspconfig').clangd.setup({})
+      require('lspconfig').clangd.setup({ cmd = { 'clangd', '--log=error' } })
     end,
   },
 
