@@ -387,7 +387,7 @@ nmap <silent> gr <plug>(coc-references)
 
 nmap <silent> K :call CocActionAsync('doHover')<CR>
 
-nmap <leader>r <Plug>(coc-rename)
+nmap <leader>n <Plug>(coc-rename)
 nmap <leader>a <plug>(coc-codeaction-cursor)
 xmap <leader>a <plug>(coc-codeaction-selected)
 
