@@ -112,7 +112,15 @@ require('lazy').setup({
       vim.g['fzf_preview_window'] = { 'up,50%', 'ctrl-/' }
     end,
   },
-  { 'ibhagwan/fzf-lua' },
+  {
+    'ibhagwan/fzf-lua',
+    opts = {
+      keymap = {
+        builtin = { true, ['<C-/>'] = 'toggle-preview' },
+        fzf = { true, ['ctrl-/'] = 'toggle-preview' },
+      },
+    },
+  },
 
   -- Configs for the Nvim LSP client
   {
