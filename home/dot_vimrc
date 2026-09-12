@@ -440,7 +440,4 @@ augroup VimrcAutoCommands
   " Highlight the symbol and its references when holding the cursor
   au CursorHold,CursorHoldI * silent call CocActionAsync('highlight')
 
-  " Update signature help on jump placeholder
-  au User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-
 augroup END
