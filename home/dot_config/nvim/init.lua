@@ -317,9 +317,6 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
--- Do nothing instead of entering Ex mode
-vim.keymap.set('n', 'Q', '<nop>')
-
 vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { silent = true })
 vim.keymap.set('n', '<C-l>', ':bnext<CR>', { silent = true })
 
