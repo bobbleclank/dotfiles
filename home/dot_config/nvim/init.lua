@@ -112,6 +112,7 @@ require('lazy').setup({
         fzf = { true, ['ctrl-/'] = 'toggle-preview' },
       },
       history = { cwd_only = true },
+      lsp = { workspace_symbols = { cwd_only = true } },
     },
   },
 
@@ -382,6 +383,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gy', fzf_lua.lsp_typedefs, opts)
     vim.keymap.set('n', 'gi', fzf_lua.lsp_implementations, opts)
     vim.keymap.set('n', 'gr', fzf_lua.lsp_references, opts)
+
+    vim.keymap.set('n', '<leader>d', fzf_lua.lsp_document_symbols, opts)
+    vim.keymap.set('n', '<leader>D', fzf_lua.lsp_live_workspace_symbols, opts)
 
     vim.keymap.set({ 'n', 'i' }, '<C-k>', vim.lsp.buf.signature_help, opts)
 
