@@ -379,7 +379,6 @@ vim.keymap.set('n', '<leader>t', fzf_lua.helptags)
 
 vim.keymap.set('n', '<leader><tab>', fzf_lua.keymaps)
 
-vim.keymap.set('i', '<C-x><C-k>', '<plug>(fzf-complete-word)', { remap = true })
 vim.keymap.set('i', '<C-x><C-f>', fzf_lua.complete_path)
 vim.keymap.set('i', '<C-x><C-l>', fzf_lua.complete_line)
 
