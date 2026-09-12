@@ -363,7 +363,7 @@ nnoremap <silent> <leader>w :Rg <C-r><C-w><CR>
 xnoremap <silent> <leader>w y:Rg <C-r>"<CR>
 
 nnoremap <silent> <leader>l :Lines<CR>
-nnoremap <silent> <leader>k :BLines<CR>
+nnoremap <silent> <leader>L :BLines<CR>
 
 nnoremap <silent> <leader>c :Commits<CR>
 nnoremap <silent> <leader>x :BCommits<CR>
