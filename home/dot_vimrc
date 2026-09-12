@@ -311,7 +311,6 @@ let mapleader = '\'
 nnoremap <silent> <F5> :set spell! spell?<CR>
 nnoremap <silent> <F6> :set list! list?<CR>
 nnoremap <silent> <F7> :set wrap! wrap?<CR>
-nnoremap <F8> :nohlsearch<CR>
 nnoremap <silent> <F9> :set paste! paste?<CR>
 
 inoremap jk <ESC>
@@ -329,7 +328,8 @@ nnoremap Y y$
 nnoremap Q <nop>
 
 nnoremap <silent> <C-h> :bprevious<CR>
-nnoremap <silent> <C-l> :bnext<CR>
+
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 noremap <silent> F :py3file ~/clang-format.py<CR>
 

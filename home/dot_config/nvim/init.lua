@@ -307,7 +307,6 @@ local fzf_lua = require('fzf-lua')
 vim.keymap.set('n', '<F5>', ':set spell!<CR>', { silent = true })
 vim.keymap.set('n', '<F6>', ':set list! list?<CR>', { silent = true })
 vim.keymap.set('n', '<F7>', ':set wrap! wrap?<CR>', { silent = true })
-vim.keymap.set('n', '<F8>', ':nohlsearch<CR>', { silent = true })
 
 vim.keymap.set('i', 'jk', '<ESC>')
 
@@ -318,7 +317,6 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
 vim.keymap.set('n', '<C-h>', ':bprevious<CR>', { silent = true })
-vim.keymap.set('n', '<C-l>', ':bnext<CR>', { silent = true })
 
 vim.keymap.set({ 'n', 'x' }, 'F', ':Neoformat<CR>')
 
