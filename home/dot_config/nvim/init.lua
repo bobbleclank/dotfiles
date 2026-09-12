@@ -377,11 +377,13 @@ vim.keymap.set('i', '<C-x><C-l>', '<plug>(fzf-complete-line)', { remap = true })
 
 -- lsp mappings
 
+local fzf_lua = require('fzf-lua')
+
 -- Global mappings
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>q', require('fzf-lua').diagnostics_document)
+vim.keymap.set('n', '<leader>q', fzf_lua.diagnostics_document)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -393,11 +395,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Buffer local mappings
     local opts = { buffer = ev.buf }
-    vim.keymap.set('n', 'gd', require('fzf-lua').lsp_definitions, opts)
-    vim.keymap.set('n', 'gy', require('fzf-lua').lsp_typedefs, opts)
-    vim.keymap.set('n', 'gi', require('fzf-lua').lsp_implementations, opts)
-    vim.keymap.set('n', 'gc', require('fzf-lua').lsp_declarations, opts)
-    vim.keymap.set('n', 'gr', require('fzf-lua').lsp_references, opts)
+    vim.keymap.set('n', 'gd', fzf_lua.lsp_definitions, opts)
+    vim.keymap.set('n', 'gy', fzf_lua.lsp_typedefs, opts)
+    vim.keymap.set('n', 'gi', fzf_lua.lsp_implementations, opts)
+    vim.keymap.set('n', 'gc', fzf_lua.lsp_declarations, opts)
+    vim.keymap.set('n', 'gr', fzf_lua.lsp_references, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
     vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, opts)
