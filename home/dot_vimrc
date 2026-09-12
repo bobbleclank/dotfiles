@@ -370,7 +370,6 @@ nnoremap <silent> <leader>C :BCommits<CR>
 xnoremap <silent> <leader>C :BCommits<CR>
 
 nnoremap <silent> <leader>t :Helptags<CR>
-
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
@@ -378,7 +377,6 @@ omap <leader><tab> <plug>(fzf-maps-o)
 " coc mappings
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
 nmap <silent> ]d <Plug>(coc-diagnostic-next)
-
 nnoremap <silent> <leader>q :<C-u>CocFzfList diagnostics<CR>
 
 nmap <silent> gd <plug>(coc-definition)
@@ -390,7 +388,6 @@ nmap <silent> gr <plug>(coc-references)
 nmap <silent> K :call CocActionAsync('doHover')<CR>
 
 nmap <leader>r <Plug>(coc-rename)
-
 nmap <leader>a <plug>(coc-codeaction-cursor)
 
 xmap if <plug>(coc-funcobj-i)

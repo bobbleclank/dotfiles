@@ -357,7 +357,6 @@ vim.keymap.set('n', '<leader>c', fzf_lua.git_commits)
 vim.keymap.set({ 'n', 'x' }, '<leader>C', fzf_lua.git_bcommits)
 
 vim.keymap.set('n', '<leader>t', fzf_lua.helptags)
-
 vim.keymap.set('n', '<leader><tab>', fzf_lua.keymaps)
 
 -- lsp mappings
@@ -377,13 +376,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Buffer local mappings
     local opts = { buffer = ev.buf }
+
     vim.keymap.set('n', 'gd', fzf_lua.lsp_definitions, opts)
     vim.keymap.set('n', 'gy', fzf_lua.lsp_typedefs, opts)
     vim.keymap.set('n', 'gi', fzf_lua.lsp_implementations, opts)
     vim.keymap.set('n', 'gc', fzf_lua.lsp_declarations, opts)
     vim.keymap.set('n', 'gr', fzf_lua.lsp_references, opts)
+
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+
     vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action, opts)
 
