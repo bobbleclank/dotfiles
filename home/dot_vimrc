@@ -380,9 +380,9 @@ nmap <silent> ]d <Plug>(coc-diagnostic-next)
 nnoremap <silent> <leader>q :<C-u>CocFzfList diagnostics<CR>
 
 nmap <silent> gd <plug>(coc-definition)
+nmap <silent> gD <plug>(coc-declaration)
 nmap <silent> gy <plug>(coc-type-definition)
 nmap <silent> gi <plug>(coc-implementation)
-nmap <silent> gc <plug>(coc-declaration)
 nmap <silent> gr <plug>(coc-references)
 
 nmap <silent> K :call CocActionAsync('doHover')<CR>
