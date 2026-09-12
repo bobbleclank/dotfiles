@@ -111,6 +111,7 @@ require('lazy').setup({
         builtin = { true, ['<C-/>'] = 'toggle-preview' },
         fzf = { true, ['ctrl-/'] = 'toggle-preview' },
       },
+      history = { cwd_only = true },
     },
   },
 
