@@ -287,7 +287,6 @@ set shortmess+=cI
 set wildignore^=*.o
 set path=$PWD/**
 
-set lazyredraw
 set ttyfast
 
 set undofile

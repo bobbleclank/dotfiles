@@ -293,8 +293,6 @@ vim.opt.shortmess:append({ c = true, I = true })
 vim.opt.wildignore:prepend({ '*.o' })
 vim.o.path = vim.env.PWD .. '/**'
 
-vim.o.lazyredraw = true
-
 vim.o.undofile = true
 vim.o.swapfile = true
 vim.o.backup = false
