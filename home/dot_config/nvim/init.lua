@@ -172,8 +172,7 @@ require('lazy').setup({
   {
     'bluz71/vim-moonfly-colors',
     name = 'moonfly',
-    lazy = false,
-    priority = 1000,
+    lazy = true,
     init = function()
       vim.g.moonflyItalics = true
       vim.g.moonflyTransparent = true
@@ -193,8 +192,7 @@ require('lazy').setup({
   },
   {
     'EdenEast/nightfox.nvim',
-    lazy = false,
-    priority = 1000,
+    lazy = true,
     config = function()
       require('nightfox').setup({
         options = {
@@ -208,8 +206,7 @@ require('lazy').setup({
   },
   {
     'tiagovla/tokyodark.nvim',
-    lazy = false,
-    priority = 1000,
+    lazy = true,
     opts = {
       transparent_background = true,
       styles = {
