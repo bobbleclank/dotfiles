@@ -311,8 +311,6 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('x', '<', '<gv')
 vim.keymap.set('x', '>', '>gv')
 
-vim.keymap.set({ 'n', 'x' }, 'F', ':Neoformat<CR>')
-
 -- fugitive mappings
 vim.keymap.set('n', '<leader>gg', ':Git<CR>', { silent = true })
 vim.keymap.set('n', '<leader>gl', ':Git log<CR>', { silent = true })
