@@ -287,8 +287,6 @@ set shortmess+=cI
 set wildignore^=*.o
 set path=$PWD/**
 
-set ttyfast
-
 set undofile
 set swapfile
 set nobackup
