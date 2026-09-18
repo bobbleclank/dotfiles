@@ -324,8 +324,6 @@ nnoremap Q <nop>
 
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
-noremap <silent> F :py3file ~/clang-format.py<CR>
-
 " fugitive mappings
 nnoremap <silent> <leader>gg :Git<CR>
 nnoremap <silent> <leader>gl :Git log<CR>
@@ -431,6 +429,9 @@ augroup VimrcAutoCommands
 
   " Resize splits when the window is resized
   au VimResized * exe "normal! \<C-w>="
+
+  " Format a range of lines with gq
+  au FileType c,cpp setlocal formatexpr=CocAction('formatSelected')
 
   " Format cpp files on write
   au BufWritePre *.h,*.hpp,*.tpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
