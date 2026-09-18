@@ -316,6 +316,9 @@ nnoremap k gk
 xnoremap < <gv
 xnoremap > >gv
 
+nnoremap <silent> [q :cprev<CR>
+nnoremap <silent> ]q :cnext<CR>
+
 " Yank to the end of the line
 nnoremap Y y$
 
