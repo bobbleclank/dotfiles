@@ -120,7 +120,8 @@ require('lazy').setup({
   {
     'neovim/nvim-lspconfig',
     config = function()
-      require('lspconfig').clangd.setup({ cmd = { 'clangd', '--log=error' } })
+      vim.lsp.config('clangd', { cmd = { 'clangd', '--log=error' } })
+      vim.lsp.enable('clangd')
     end,
   },
 
@@ -373,7 +374,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>n', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'x' }, '<leader>a', vim.lsp.buf.code_action, opts)
 
-    vim.keymap.set('n', '<leader>i', vim.cmd.ClangdSwitchSourceHeader, opts)
+    vim.keymap.set('n', '<leader>i', vim.cmd.LspClangdSwitchSourceHeader, opts)
 
     vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
       group = 'UserLspConfig',
