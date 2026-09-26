@@ -399,10 +399,10 @@ Changing:
 
 | Key | Does |
 | --- | --- |
-| `<leader>n` | rename the symbol, everywhere in the project |
-| `<leader>a` | code actions — the fix for a diagnostic, or a refactor |
+| `grn` | rename the symbol, everywhere in the project |
+| `gra` | code actions — the fix for a diagnostic, or a refactor |
 
-`<leader>a` also works from visual mode, and that is not the same list — the
+`gra` also works from visual mode, and that is not the same list — the
 refactors that need a range, like extracting a function or a variable, only
 appear over a selection.
 

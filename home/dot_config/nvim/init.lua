@@ -375,9 +375,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     vim.keymap.set({ 'n', 'i' }, '<C-k>', vim.lsp.buf.signature_help, opts)
 
-    vim.keymap.set('n', '<leader>n', vim.lsp.buf.rename, opts)
-    vim.keymap.set({ 'n', 'x' }, '<leader>a', vim.lsp.buf.code_action, opts)
-
     vim.keymap.set('n', '<leader>i', vim.cmd.LspClangdSwitchSourceHeader, opts)
 
     vim.api.nvim_create_autocmd({'CursorHold', 'CursorHoldI'}, {
