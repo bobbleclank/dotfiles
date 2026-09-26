@@ -131,7 +131,7 @@ let g:nightflyUndercurls = v:false
 colorscheme nightfly
 
 "-------------------------------------------------------------------------------
-" UI settings
+" UI
 "-------------------------------------------------------------------------------
 
 set nocursorline
@@ -273,7 +273,7 @@ let g:better_whitespace_enabled = 1
 let g:strip_whitespace_on_save = 0
 
 "-------------------------------------------------------------------------------
-" Behavioural settings
+" Behaviour
 "-------------------------------------------------------------------------------
 
 set autoread

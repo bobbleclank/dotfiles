@@ -245,7 +245,7 @@ vim.o.termguicolors = true
 
 vim.cmd [[colorscheme nightfly]]
 
--- UI settings
+-- UI
 
 vim.o.cursorline = false
 vim.o.foldenable = false
@@ -278,7 +278,7 @@ vim.o.showmatch = true
 vim.o.matchtime = 3
 vim.o.scrolloff = 3
 
--- Behavioural settings
+-- Behaviour
 
 vim.o.autoread = true
 vim.o.hidden = true
