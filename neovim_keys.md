@@ -213,7 +213,7 @@ Swapping:
 | Key | Does |
 | --- | --- |
 | `gx` | open the URL under the cursor |
-| `<F5>` | toggle spell checking |
+| `yos` | toggle spell checking |
 
 ## Undo
 

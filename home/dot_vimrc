@@ -305,7 +305,7 @@ let &spellfile = s:data_dir . '/spell/wordlist.utf-8.add'
 
 let mapleader = '\'
 
-nnoremap <silent> <F5> :set spell! spell?<CR>
+nnoremap <silent> yos :set spell! spell?<CR>
 
 inoremap jk <ESC>
 

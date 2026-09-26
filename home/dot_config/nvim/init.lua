@@ -317,7 +317,7 @@ vim.diagnostic.config({
 
 local fzf_lua = require('fzf-lua')
 
-vim.keymap.set('n', '<F5>', ':set spell!<CR>', { silent = true })
+vim.keymap.set('n', 'yos', ':set spell!<CR>', { silent = true })
 
 vim.keymap.set('i', 'jk', '<ESC>')
 
