@@ -328,6 +328,8 @@ nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " Quickfix
 nnoremap <silent> [q :cprev<CR>
 nnoremap <silent> ]q :cnext<CR>
+nnoremap <silent> [Q :cfirst<CR>
+nnoremap <silent> ]Q :clast<CR>
 
 " fzf mappings
 nnoremap <silent> <C-p>     :Files<CR>
