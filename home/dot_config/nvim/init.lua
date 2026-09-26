@@ -343,8 +343,8 @@ vim.keymap.set('n', '<leader><tab>', fzf_lua.keymaps)
 -- lsp mappings
 
 -- Global mappings
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end)
+vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end)
 vim.keymap.set('n', '<leader>q', fzf_lua.diagnostics_document)
 
 -- Use LspAttach autocommand to only map the following keys
