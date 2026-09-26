@@ -327,9 +327,6 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('x', '<', '<gv')
 vim.keymap.set('x', '>', '>gv')
 
-vim.keymap.set('n', '[q', ':cprev<CR>', { silent = true })
-vim.keymap.set('n', ']q', ':cnext<CR>', { silent = true })
-
 -- fzf mappings
 vim.keymap.set('n', '<C-p>', fzf_lua.files)
 vim.keymap.set('n', '<leader>f', fzf_lua.git_files)
