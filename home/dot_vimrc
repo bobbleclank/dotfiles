@@ -325,6 +325,12 @@ nnoremap Q <nop>
 " Clear search highlighting, then redraw
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
+" Buffers
+nnoremap <silent> [b :bprev<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
 " Quickfix
 nnoremap <silent> [q :cprev<CR>
 nnoremap <silent> ]q :cnext<CR>
