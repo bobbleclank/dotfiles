@@ -213,7 +213,6 @@ Swapping:
 | Key | Does |
 | --- | --- |
 | `gx` | open the URL under the cursor |
-| `yos` | toggle spell checking |
 
 ## Undo
 
@@ -296,6 +295,22 @@ list, and `<CR>` jumps to the entry under the cursor.
 
 `[q` and `]q` are what save the window hopping: they move you through the list
 from wherever you are, so the window can stay closed.
+
+## Spelling
+
+Off by default, and on automatically for Git commit messages and Markdown
+files. `zg` and `zw` write to a word list of your own, which supplements the
+dictionary Neovim ships.
+
+| Key | Does |
+| --- | --- |
+| `yos` | toggle spell checking |
+| `[s` `]s` | go to the previous, next misspelled word |
+| `z=` | suggest corrections for the word under the cursor |
+| `zg` `zw` | add the word to your list as good, as wrong |
+| `zG` `zW` | the same, but only for this session |
+| `zug` `zuw` | undo `zg`, `zw` |
+| `zuG` `zuW` | undo `zG`, `zW` |
 
 ## Fuzzy finding
 
