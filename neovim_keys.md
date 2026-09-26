@@ -205,6 +205,7 @@ Swapping:
 | `~` | toggle the case of the character under the cursor, then move right |
 | `J` | join the line below onto this one, replacing its indent with a space |
 | `gJ` | join the line below onto this one, exactly as it is |
+| `[<Space>` `]<Space>` | add an empty line above, below the cursor |
 | `<C-a>` `<C-x>` | increment, decrement the number under the cursor |
 
 ## Miscellaneous
@@ -461,6 +462,7 @@ Not there at all:
 | `Q` | playback of the last recorded macro |
 | `gc` `gcc` | comment operator |
 | `gO` `<leader>S` | symbol search |
+| `[<Space>` `]<Space>` | adding an empty line |
 | `[D` `]D` | first, last diagnostic |
 | `<C-s>` | signature help |
 | `<leader>r` `<leader>R` | call hierarchy |
