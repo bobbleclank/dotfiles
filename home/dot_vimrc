@@ -368,7 +368,7 @@ nnoremap <silent> <leader>q :<C-u>CocFzfList diagnostics<CR>
 
 nmap <silent> gd <plug>(coc-definition)
 nmap <silent> gD <plug>(coc-declaration)
-nmap <silent> gy <plug>(coc-type-definition)
+nmap <silent> grt <plug>(coc-type-definition)
 nmap <silent> gri <plug>(coc-implementation)
 nmap <silent> grr <plug>(coc-references)
 
