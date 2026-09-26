@@ -300,7 +300,18 @@ vim.o.spell = false
 
 -- Diagnostics
 
-vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({
+  virtual_text = true,
+  jump = {
+    on_jump = function(_, bufnr)
+      vim.diagnostic.open_float({
+        bufnr = bufnr,
+        scope = 'cursor',
+        focus = false,
+      })
+    end,
+  },
+})
 
 -- Key mappings
 
@@ -343,8 +354,6 @@ vim.keymap.set('n', '<leader><tab>', fzf_lua.keymaps)
 -- lsp mappings
 
 -- Global mappings
-vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end)
-vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end)
 vim.keymap.set('n', '<leader>q', fzf_lua.diagnostics_document)
 
 -- Use LspAttach autocommand to only map the following keys
