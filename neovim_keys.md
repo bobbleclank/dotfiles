@@ -208,12 +208,6 @@ Swapping:
 | `[<Space>` `]<Space>` | add an empty line above, below the cursor |
 | `<C-a>` `<C-x>` | increment, decrement the number under the cursor |
 
-## Miscellaneous
-
-| Key | Does |
-| --- | --- |
-| `gx` | open the URL under the cursor |
-
 ## Undo
 
 | Key | Does |
@@ -311,6 +305,12 @@ dictionary Neovim ships.
 | `zG` `zW` | the same, but only for this session |
 | `zug` `zuw` | undo `zg`, `zw` |
 | `zuG` `zuW` | undo `zG`, `zW` |
+
+## Miscellaneous
+
+| Key | Does |
+| --- | --- |
+| `gx` | open the URL under the cursor |
 
 ## Fuzzy finding
 
