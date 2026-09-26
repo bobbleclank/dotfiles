@@ -385,6 +385,7 @@ Diagnostics:
 | Key | Does |
 | --- | --- |
 | `[d` `]d` | jump to the previous, next diagnostic in the buffer, showing the message |
+| `[D` `]D` | the same, for the first and last diagnostic |
 | `<C-w>d` | show the diagnostic under the cursor |
 | `<leader>q` | every diagnostic in this buffer |
 
@@ -449,6 +450,7 @@ Not there at all:
 | `Q` | playback of the last recorded macro |
 | `gc` `gcc` | comment operator |
 | `gO` `<leader>S` | symbol search |
+| `[D` `]D` | first, last diagnostic |
 | `<C-s>` | signature help |
 | `<leader>r` `<leader>R` | call hierarchy |
 | `<leader>z` `<leader>Z` | type hierarchy |
