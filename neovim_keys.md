@@ -244,6 +244,17 @@ Macros:
 `@@` and `Q` differ on the first run after recording: `Q` works straight away,
 `@@` has nothing to repeat until you have played something once.
 
+## Buffers
+
+A file loaded into memory. One appears for every file you open — from the
+command line, `:edit`, a picker, or a jump to another file — and stays after
+you move away.
+
+| Key | Goes to |
+| --- | --- |
+| `[b` `]b` | the previous, next buffer |
+| `[B` `]B` | the first, last buffer |
+
 ## Windows
 
 | Key | Does |
