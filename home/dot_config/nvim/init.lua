@@ -298,6 +298,10 @@ vim.o.writebackup = false
 vim.o.spelllang = 'en'
 vim.o.spell = false
 
+-- Diagnostics
+
+vim.diagnostic.config({ virtual_text = true })
+
 -- Key mappings
 
 local fzf_lua = require('fzf-lua')
