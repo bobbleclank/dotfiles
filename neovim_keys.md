@@ -393,7 +393,7 @@ Reading:
 | Key | Does |
 | --- | --- |
 | `K` | hover — the type, the signature, the doc comment |
-| `<C-k>` | signature help, with the current parameter marked — also in insert mode |
+| `<C-s>` | signature help, with the current parameter marked — from insert mode |
 
 Changing:
 
@@ -449,7 +449,7 @@ Not there at all:
 | `Q` | playback of the last recorded macro |
 | `gc` `gcc` | comment operator |
 | `gO` `<leader>S` | symbol search |
-| `<C-k>` | signature help |
+| `<C-s>` | signature help |
 | `<leader>r` `<leader>R` | call hierarchy |
 | `<leader>z` `<leader>Z` | type hierarchy |
 
