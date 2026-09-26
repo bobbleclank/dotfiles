@@ -351,7 +351,7 @@ Finding symbols:
 
 | Key | Finds |
 | --- | --- |
-| `<leader>d` | every symbol in this file — no query, the complete outline |
+| `gO` | every symbol in this file — no query, the complete outline |
 | `<leader>D` | a symbol anywhere in the project — type to search the index |
 
 Call and type hierarchy:
@@ -448,8 +448,8 @@ Not there at all:
 | --- | --- |
 | `Q` | playback of the last recorded macro |
 | `gc` `gcc` | comment operator |
+| `gO` `<leader>D` | symbol search |
 | `<C-k>` | signature help |
-| `<leader>d` `<leader>D` | symbol search |
 | `<leader>r` `<leader>R` | call hierarchy |
 | `<leader>z` `<leader>Z` | type hierarchy |
 

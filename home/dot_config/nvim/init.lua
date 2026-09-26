@@ -364,7 +364,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gri', fzf_lua.lsp_implementations, opts)
     vim.keymap.set('n', 'grr', fzf_lua.lsp_references, opts)
 
-    vim.keymap.set('n', '<leader>d', fzf_lua.lsp_document_symbols, opts)
+    vim.keymap.set('n', 'gO', fzf_lua.lsp_document_symbols, opts)
     vim.keymap.set('n', '<leader>D', fzf_lua.lsp_live_workspace_symbols, opts)
 
     vim.keymap.set('n', '<leader>r', fzf_lua.lsp_incoming_calls, opts)
