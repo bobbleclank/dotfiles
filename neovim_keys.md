@@ -271,13 +271,13 @@ A list of positions to step through, filled by anything that produces one —
 | Key | Does |
 | --- | --- |
 | `[q` `]q` | jump to the previous, next entry |
+| `[Q` `]Q` | jump to the first, last entry |
 
 Commands:
 
 | Command | Does |
 | --- | --- |
 | `:copen` `:cclose` | open, close the quickfix window |
-| `:cfirst` `:clast` | jump to the first, last entry |
 
 The quickfix window is an ordinary buffer, so `j` and `k` move down and up the
 list, and `<CR>` jumps to the entry under the cursor.
