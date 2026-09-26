@@ -344,8 +344,8 @@ Going somewhere:
 | `gd` | the definition |
 | `gD` | the declaration |
 | `gy` | the definition of the type, rather than of the symbol |
-| `gi` | the implementations — virtual functions only |
-| `gr` | every reference |
+| `gri` | the implementations — virtual functions only |
+| `grr` | every reference |
 
 Finding symbols:
 
