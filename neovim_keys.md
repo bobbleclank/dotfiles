@@ -352,7 +352,7 @@ Finding symbols:
 | Key | Finds |
 | --- | --- |
 | `gO` | every symbol in this file — no query, the complete outline |
-| `<leader>D` | a symbol anywhere in the project — type to search the index |
+| `<leader>S` | a symbol anywhere in the project — type to search the index |
 
 Call and type hierarchy:
 
@@ -429,7 +429,7 @@ Some keys exist only in particular pickers.
 
 | Key | Picker | Does |
 | --- | --- | --- |
-| `<C-g>` | `<leader>s` `<leader>D` | toggle live query and fuzzy filter |
+| `<C-g>` | `<leader>s` `<leader>S` | toggle live query and fuzzy filter |
 | `<Left>` `<Right>` | `<leader>F` | stage, unstage the file |
 | `<C-x>` | `<leader>F` | discard the changes, or delete the file if untracked — asks first |
 | `<C-d>` | `<leader>c` | show the files the commit changed |
@@ -448,7 +448,7 @@ Not there at all:
 | --- | --- |
 | `Q` | playback of the last recorded macro |
 | `gc` `gcc` | comment operator |
-| `gO` `<leader>D` | symbol search |
+| `gO` `<leader>S` | symbol search |
 | `<C-k>` | signature help |
 | `<leader>r` `<leader>R` | call hierarchy |
 | `<leader>z` `<leader>Z` | type hierarchy |
