@@ -355,7 +355,7 @@ Going somewhere:
 | --- | --- |
 | `gd` | the definition |
 | `gD` | the declaration |
-| `gy` | the definition of the type, rather than of the symbol |
+| `grt` | the definition of the type, rather than of the symbol |
 | `gri` | the implementations — virtual functions only |
 | `grr` | every reference |
 
