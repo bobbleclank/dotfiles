@@ -433,6 +433,12 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   command = [[if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]],
 })
 
+-- Reload files changed outside the editor when resuming from suspend
+vim.api.nvim_create_autocmd('VimResume', {
+  group = vimrc_augroup,
+  command = 'checktime',
+})
+
 -- Resize splits when the window is resized
 vim.api.nvim_create_autocmd('VimResized', {
   group = vimrc_augroup,
