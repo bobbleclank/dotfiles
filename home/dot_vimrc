@@ -424,7 +424,7 @@ augroup VimrcAutoCommands
   " Format a range of lines with gq
   au FileType c,cpp setlocal formatexpr=CocAction('formatSelected')
 
-  " Format cpp files on write
+  " Format the changed lines on write
   au BufWritePre *.h,*.c,*.cpp call ClangFormatOnWrite()
 
   " Highlight the symbol and its references when holding the cursor

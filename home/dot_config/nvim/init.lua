@@ -445,7 +445,7 @@ vim.api.nvim_create_autocmd('VimResized', {
   command = [[exe "normal! \<C-w>="]],
 })
 
--- Format cpp files on write
+-- Format the whole file on write
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = { '*.h', '*.c', '*.cpp' },
   group = vimrc_augroup,
