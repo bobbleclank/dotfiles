@@ -425,7 +425,7 @@ augroup VimrcAutoCommands
   au FileType c,cpp setlocal formatexpr=CocAction('formatSelected')
 
   " Format cpp files on write
-  au BufWritePre *.h,*.hpp,*.tpp,*.c,*.cc,*.cpp call ClangFormatOnWrite()
+  au BufWritePre *.h,*.c,*.cpp call ClangFormatOnWrite()
 
   " Highlight the symbol and its references when holding the cursor
   au CursorHold,CursorHoldI * silent call CocActionAsync('highlight')
