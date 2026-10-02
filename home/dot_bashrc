@@ -55,15 +55,8 @@ export EDITOR=vim
 # History settings
 HISTSIZE=99999
 
-# Bash completion support for core Git
-if [[ -f $HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash ]]; then
-  source $HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash
-fi
-
-# Bash Git prompt support
-if [[ -f $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh ]]; then
-  source $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh
-fi
+# Machine-specific settings
+source ~/.bashrc.local
 
 # Bash Git prompt settings
 if command -v __git_ps1 >/dev/null; then

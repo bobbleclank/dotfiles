@@ -7,6 +7,7 @@ cd ~
 
 ln -s ~/dotfiles/home/dot_bash_profile_<arm|intel> .bash_profile
 ln -s ~/dotfiles/home/dot_bashrc .bashrc
+ln -s ~/dotfiles/home/dot_bashrc.local_<arm|intel> .bashrc.local
 
 ln -s ~/dotfiles/home/dot_gitconfig .gitconfig
 ln -s ~/dotfiles/home/dot_tmux.conf .tmux.conf
