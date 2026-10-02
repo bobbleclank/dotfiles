@@ -59,12 +59,12 @@ HISTSIZE=99999
 [[ -d /usr/local/opt/llvm/bin ]] && PATH=/usr/local/opt/llvm/bin:$PATH
 
 # Bash completion support for core Git
-if [[ -f ~/.git-completion.bash ]]; then
-  source ~/.git-completion.bash
+if [[ -f /usr/local/etc/bash_completion.d/git-completion.bash ]]; then
+  source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
 # Bash Git prompt support
-if [[ -f ~/.git-prompt.sh ]]; then
+if [[ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]]; then
   PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
   GIT_PS1_SHOWDIRTYSTATE='1'
   GIT_PS1_SHOWSTASHSTATE='1'
@@ -74,7 +74,7 @@ if [[ -f ~/.git-prompt.sh ]]; then
   GIT_PS1_SHOWCONFLICTSTATE='yes'
   GIT_PS1_DESCRIBE_STYLE='branch'
   GIT_PS1_SHOWCOLORHINTS='1'
-  source ~/.git-prompt.sh
+  source /usr/local/etc/bash_completion.d/git-prompt.sh
 fi
 
 # Command-line fuzzy finder
