@@ -5,8 +5,9 @@ Dot files for Bash, Clang-Format, Claude, Git, Neovim, tmux and Vim.
 ```
 cd ~
 
-ln -s ~/dotfiles/home/dot_bash_profile_intel .bash_profile
+ln -s ~/dotfiles/home/dot_bash_profile_<arm|intel> .bash_profile
 ln -s ~/dotfiles/home/dot_bashrc .bashrc
+
 ln -s ~/dotfiles/home/dot_gitconfig .gitconfig
 ln -s ~/dotfiles/home/dot_tmux.conf .tmux.conf
 ln -s ~/dotfiles/home/dot_vimrc .vimrc

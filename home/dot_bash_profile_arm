@@ -1,0 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+[[ -d $HOMEBREW_PREFIX/opt/llvm/bin ]] && PATH=$HOMEBREW_PREFIX/opt/llvm/bin:$PATH
+
+source ~/.bashrc
