@@ -62,6 +62,11 @@ fi
 
 # Bash Git prompt support
 if [[ -f $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh ]]; then
+  source $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh
+fi
+
+# Bash Git prompt settings
+if command -v __git_ps1 >/dev/null; then
   PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
   GIT_PS1_SHOWDIRTYSTATE='1'
   GIT_PS1_SHOWSTASHSTATE='1'
@@ -71,7 +76,6 @@ if [[ -f $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh ]]; then
   GIT_PS1_SHOWCONFLICTSTATE='yes'
   GIT_PS1_DESCRIBE_STYLE='branch'
   GIT_PS1_SHOWCOLORHINTS='1'
-  source $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh
 fi
 
 # Command-line fuzzy finder
