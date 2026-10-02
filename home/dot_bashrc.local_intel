@@ -3,6 +3,11 @@ if [[ -f $HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash ]]; then
   source $HOMEBREW_PREFIX/etc/bash_completion.d/git-completion.bash
 fi
 
+# Bash completion for tig
+if [[ -f $HOMEBREW_PREFIX/etc/bash_completion.d/tig-completion.bash ]]; then
+  source $HOMEBREW_PREFIX/etc/bash_completion.d/tig-completion.bash
+fi
+
 # Bash Git prompt support
 if [[ -f $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh ]]; then
   source $HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh
