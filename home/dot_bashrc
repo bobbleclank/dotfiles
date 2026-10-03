@@ -41,6 +41,8 @@ alias tiy='tig --since=1.year'
 # -- cmake --
 alias bd='cmake --build build/debug'
 alias br='cmake --build build/release'
+alias ctd='ctest --test-dir build/debug'
+alias ctr='ctest --test-dir build/release'
 # -- miscellaneous --
 alias c='clear'
 alias h='history'
