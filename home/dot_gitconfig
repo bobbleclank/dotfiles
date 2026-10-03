@@ -3,6 +3,7 @@
 	email = saitora@gmail.com
 [core]
 	editor = vim
+	pager = less -S
 [diff]
 	tool = vimdiff
 	algorithm = histogram
