@@ -8,6 +8,7 @@
   ln -s ~/dotfiles/home/dot_bashrc.local_<arm|intel> .bashrc.local
 
   ln -s ~/dotfiles/home/dot_gitconfig .gitconfig
+  ln -s ~/dotfiles/home/dot_gitconfig.local .gitconfig.local
   ln -s ~/dotfiles/home/dot_tmux.conf .tmux.conf
   ln -s ~/dotfiles/home/dot_vimrc .vimrc
 

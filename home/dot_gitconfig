@@ -1,8 +1,6 @@
 [user]
 	name = Simon Truscott
 	email = saitora@gmail.com
-[credential]
-	helper = osxkeychain
 [core]
 	editor = vim
 [diff]
@@ -24,3 +22,5 @@
 	pretty = %C(auto)%h %C(blue)%cd %C(green)%an%C(auto)%d %C(auto)%s
 [init]
 	defaultBranch = main
+[include]
+	path = ~/.gitconfig.local
